@@ -1,0 +1,72 @@
+<div>
+    <h2 data-translate="registrationBookApp.thirdLevelDepartment.home.title">Third Level Departments</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="third-level-department.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="registrationBookApp.thirdLevelDepartment.home.createLabel">
+                        Create new Third Level Department
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="deptName"><span data-translate="registrationBookApp.thirdLevelDepartment.deptName">Dept Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="deptEnglishName"><span data-translate="registrationBookApp.thirdLevelDepartment.deptEnglishName">Dept English Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="appointmentable"><span data-translate="registrationBookApp.thirdLevelDepartment.appointmentable">Appointmentable</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="registrationBookApp.thirdLevelDepartment.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span data-translate="registrationBookApp.thirdLevelDepartment.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.thirdLevelDepartment.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.thirdLevelDepartment.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="thirdLevelDepartment in vm.thirdLevelDepartments track by thirdLevelDepartment.id">
+                    <td><a ui-sref="third-level-department-detail({id:thirdLevelDepartment.id})">{{thirdLevelDepartment.id}}</a></td>
+                    <td>{{thirdLevelDepartment.deptName}}</td>
+                    <td>{{thirdLevelDepartment.deptEnglishName}}</td>
+                    <td>{{thirdLevelDepartment.appointmentable}}</td>
+                    <td>{{thirdLevelDepartment.createdBy}}</td>
+                    <td>{{thirdLevelDepartment.createdDate | date:'medium'}}</td>
+                    <td>{{thirdLevelDepartment.lastModifiedBy}}</td>
+                    <td>{{thirdLevelDepartment.lastModifiedDate | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="third-level-department-detail({id:thirdLevelDepartment.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="third-level-department.edit({id:thirdLevelDepartment.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="third-level-department.delete({id:thirdLevelDepartment.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

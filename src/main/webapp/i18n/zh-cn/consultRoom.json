@@ -1,0 +1,27 @@
+{
+    "registrationBookApp": {
+        "consultRoom" : {
+            "home": {
+                "title": "Consult Rooms",
+                "createLabel": "创建新 Consult Room",
+                "createOrEditLabel": "创建或编辑 Consult Room"
+            },
+            "created": "Consult Room {{ param }} 创建成功",
+            "updated": "Consult Room {{ param }} 更新成功",
+            "deleted": "Consult Room {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Consult Room {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Consult Room"
+            },
+            "consultRoomName": "Consult Room Name",
+            "consultRoomNo": "Consult Room No",
+            "createdBy": "Created By",
+            "createdDate": "Created Date",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedDate": "Last Modified Date",
+            "dept": "Dept"
+        }
+    }
+}

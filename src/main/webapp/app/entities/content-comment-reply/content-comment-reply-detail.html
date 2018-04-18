@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span data-translate="registrationBookApp.contentCommentReply.detail.title">Content Comment Reply</span> {{vm.contentCommentReply.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="registrationBookApp.contentCommentReply.contentId">Content Id</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.contentId}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.contentName">Content Name</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.contentName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.userId">User Id</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.userId}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.userName">User Name</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.userName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.content">Content</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.content}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.contentCommentReply.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.contentCommentReply.contentComment">Content Comment</span></dt>
+        <dd>
+            <a ui-sref="content-comment-detail({id:vm.contentCommentReply.contentCommentId})">{{vm.contentCommentReply.contentCommentId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="content-comment-reply-detail.edit({id:vm.contentCommentReply.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

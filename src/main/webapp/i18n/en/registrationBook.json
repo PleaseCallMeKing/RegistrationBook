@@ -1,0 +1,36 @@
+{
+    "registrationBookApp": {
+        "registrationBook" : {
+            "home": {
+                "title": "Registration Books",
+                "createLabel": "Create a new Registration Book",
+                "createOrEditLabel": "Create or edit a Registration Book"
+            },
+            "created": "A new Registration Book is created with identifier {{ param }}",
+            "updated": "A Registration Book is updated with identifier {{ param }}",
+            "deleted": "A Registration Book is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Registration Book {{ id }}?"
+            },
+            "detail": {
+                "title": "Registration Book"
+            },
+            "userId": "User Id",
+            "userName": "User Name",
+            "mobilePhone": "Mobile Phone",
+            "idCard": "Id Card",
+            "deptId": "Dept Id",
+            "deptName": "Dept Name",
+            "doctorId": "Doctor Id",
+            "doctorName": "Doctor Name",
+            "consultId": "Consult Id",
+            "consultName": "Consult Name",
+            "consultNo": "Consult No",
+            "visitDateTime": "Visit Date Time",
+            "createdBy": "Created By",
+            "createdDate": "Created Date",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedDate": "Last Modified Date"
+        }
+    }
+}

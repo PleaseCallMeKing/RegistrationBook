@@ -1,0 +1,30 @@
+{
+    "registrationBookApp": {
+        "contentCommentReply" : {
+            "home": {
+                "title": "Content Comment Replies",
+                "createLabel": "Create a new Content Comment Reply",
+                "createOrEditLabel": "Create or edit a Content Comment Reply"
+            },
+            "created": "A new Content Comment Reply is created with identifier {{ param }}",
+            "updated": "A Content Comment Reply is updated with identifier {{ param }}",
+            "deleted": "A Content Comment Reply is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Content Comment Reply {{ id }}?"
+            },
+            "detail": {
+                "title": "Content Comment Reply"
+            },
+            "contentId": "Content Id",
+            "contentName": "Content Name",
+            "userId": "User Id",
+            "userName": "User Name",
+            "content": "Content",
+            "createdBy": "Created By",
+            "createdDate": "Created Date",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedDate": "Last Modified Date",
+            "contentComment": "Content Comment"
+        }
+    }
+}

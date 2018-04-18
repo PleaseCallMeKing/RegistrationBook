@@ -1,0 +1,27 @@
+{
+    "registrationBookApp": {
+        "secondLevelThirdLevelDepartment" : {
+            "home": {
+                "title": "Second Level Third Level Departments",
+                "createLabel": "Create a new Second Level Third Level Department",
+                "createOrEditLabel": "Create or edit a Second Level Third Level Department"
+            },
+            "created": "A new Second Level Third Level Department is created with identifier {{ param }}",
+            "updated": "A Second Level Third Level Department is updated with identifier {{ param }}",
+            "deleted": "A Second Level Third Level Department is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Second Level Third Level Department {{ id }}?"
+            },
+            "detail": {
+                "title": "Second Level Third Level Department"
+            },
+            "deptName": "Dept Name",
+            "deptEnglishName": "Dept English Name",
+            "createdBy": "Created By",
+            "createdDate": "Created Date",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedDate": "Last Modified Date",
+            "dept": "Dept"
+        }
+    }
+}

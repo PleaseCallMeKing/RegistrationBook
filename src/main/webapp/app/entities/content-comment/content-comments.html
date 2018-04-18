@@ -1,0 +1,80 @@
+<div>
+    <h2 data-translate="registrationBookApp.contentComment.home.title">Content Comments</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="content-comment.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="registrationBookApp.contentComment.home.createLabel">
+                        Create new Content Comment
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="contentType"><span data-translate="registrationBookApp.contentComment.contentType">Content Type</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="contentId"><span data-translate="registrationBookApp.contentComment.contentId">Content Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="contentName"><span data-translate="registrationBookApp.contentComment.contentName">Content Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="floorNumber"><span data-translate="registrationBookApp.contentComment.floorNumber">Floor Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="userId"><span data-translate="registrationBookApp.contentComment.userId">User Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="userName"><span data-translate="registrationBookApp.contentComment.userName">User Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="content"><span data-translate="registrationBookApp.contentComment.content">Content</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="registrationBookApp.contentComment.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span data-translate="registrationBookApp.contentComment.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.contentComment.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.contentComment.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="contentComment in vm.contentComments track by contentComment.id">
+                    <td><a ui-sref="content-comment-detail({id:contentComment.id})">{{contentComment.id}}</a></td>
+                    <td>{{contentComment.contentType}}</td>
+                    <td>{{contentComment.contentId}}</td>
+                    <td>{{contentComment.contentName}}</td>
+                    <td>{{contentComment.floorNumber}}</td>
+                    <td>{{contentComment.userId}}</td>
+                    <td>{{contentComment.userName}}</td>
+                    <td>{{contentComment.content}}</td>
+                    <td>{{contentComment.createdBy}}</td>
+                    <td>{{contentComment.createdDate | date:'medium'}}</td>
+                    <td>{{contentComment.lastModifiedBy}}</td>
+                    <td>{{contentComment.lastModifiedDate | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="content-comment-detail({id:contentComment.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="content-comment.edit({id:contentComment.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="content-comment.delete({id:contentComment.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

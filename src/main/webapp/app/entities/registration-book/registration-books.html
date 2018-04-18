@@ -1,0 +1,90 @@
+<div>
+    <h2 data-translate="registrationBookApp.registrationBook.home.title">Registration Books</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="registration-book.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="registrationBookApp.registrationBook.home.createLabel">
+                        Create new Registration Book
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="userId"><span data-translate="registrationBookApp.registrationBook.userId">User Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="userName"><span data-translate="registrationBookApp.registrationBook.userName">User Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="mobilePhone"><span data-translate="registrationBookApp.registrationBook.mobilePhone">Mobile Phone</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="idCard"><span data-translate="registrationBookApp.registrationBook.idCard">Id Card</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="deptId"><span data-translate="registrationBookApp.registrationBook.deptId">Dept Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="deptName"><span data-translate="registrationBookApp.registrationBook.deptName">Dept Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="doctorId"><span data-translate="registrationBookApp.registrationBook.doctorId">Doctor Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="doctorName"><span data-translate="registrationBookApp.registrationBook.doctorName">Doctor Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="consultId"><span data-translate="registrationBookApp.registrationBook.consultId">Consult Id</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="consultName"><span data-translate="registrationBookApp.registrationBook.consultName">Consult Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="consultNo"><span data-translate="registrationBookApp.registrationBook.consultNo">Consult No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="visitDateTime"><span data-translate="registrationBookApp.registrationBook.visitDateTime">Visit Date Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="registrationBookApp.registrationBook.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span data-translate="registrationBookApp.registrationBook.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.registrationBook.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.registrationBook.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="registrationBook in vm.registrationBooks track by registrationBook.id">
+                    <td><a ui-sref="registration-book-detail({id:registrationBook.id})">{{registrationBook.id}}</a></td>
+                    <td>{{registrationBook.userId}}</td>
+                    <td>{{registrationBook.userName}}</td>
+                    <td>{{registrationBook.mobilePhone}}</td>
+                    <td>{{registrationBook.idCard}}</td>
+                    <td>{{registrationBook.deptId}}</td>
+                    <td>{{registrationBook.deptName}}</td>
+                    <td>{{registrationBook.doctorId}}</td>
+                    <td>{{registrationBook.doctorName}}</td>
+                    <td>{{registrationBook.consultId}}</td>
+                    <td>{{registrationBook.consultName}}</td>
+                    <td>{{registrationBook.consultNo}}</td>
+                    <td>{{registrationBook.visitDateTime | date:'medium'}}</td>
+                    <td>{{registrationBook.createdBy}}</td>
+                    <td>{{registrationBook.createdDate | date:'medium'}}</td>
+                    <td>{{registrationBook.lastModifiedBy}}</td>
+                    <td>{{registrationBook.lastModifiedDate | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="registration-book-detail({id:registrationBook.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="registration-book.edit({id:registrationBook.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="registration-book.delete({id:registrationBook.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

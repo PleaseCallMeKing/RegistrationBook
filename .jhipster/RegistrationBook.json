@@ -1,0 +1,117 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "userId",
+            "javadoc": "预约者Id",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userName",
+            "javadoc": "预约者姓名",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "mobilePhone",
+            "javadoc": "预约者手机号",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "idCard",
+            "javadoc": "大陆身份证号",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 18
+        },
+        {
+            "fieldName": "deptId",
+            "javadoc": "预约科室id",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "deptName",
+            "javadoc": "预约科室名称",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 250
+        },
+        {
+            "fieldName": "doctorId",
+            "javadoc": "预约医生id",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "doctorName",
+            "javadoc": "预约医生姓名",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "consultId",
+            "javadoc": "诊室Id",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "consultName",
+            "javadoc": "诊室名称",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 250
+        },
+        {
+            "fieldName": "consultNo",
+            "javadoc": "诊室编号",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "visitDateTime",
+            "javadoc": "就诊时间",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "changelogDate": "20180417031739",
+    "javadoc": "预约挂号\n@author Carl Wang",
+    "entityTableName": "registration_book",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false
+}

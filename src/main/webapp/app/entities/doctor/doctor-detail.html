@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span data-translate="registrationBookApp.doctor.detail.title">Doctor</span> {{vm.doctor.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="registrationBookApp.doctor.userId">User Id</span></dt>
+        <dd>
+            <span>{{vm.doctor.userId}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.fullName">Full Name</span></dt>
+        <dd>
+            <span>{{vm.doctor.fullName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.gender">Gender</span></dt>
+        <dd>
+            <span>{{vm.doctor.gender}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.nationality">Nationality</span></dt>
+        <dd>
+            <span>{{vm.doctor.nationality}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.imgurl">Imgurl</span></dt>
+        <dd>
+            <span>{{vm.doctor.imgurl}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.profession">Profession</span></dt>
+        <dd>
+            <span>{{vm.doctor.profession}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.mobilephone">Mobilephone</span></dt>
+        <dd>
+            <span>{{vm.doctor.mobilephone}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.active">Active</span></dt>
+        <dd>
+            <span>{{vm.doctor.active}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.doctor.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.doctor.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.doctor.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.doctor.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.doctor.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="doctor-detail.edit({id:vm.doctor.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

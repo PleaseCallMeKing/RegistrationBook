@@ -1,0 +1,36 @@
+{
+    "registrationBookApp": {
+        "registrationBook" : {
+            "home": {
+                "title": "Registration Books",
+                "createLabel": "创建新 Registration Book",
+                "createOrEditLabel": "创建或编辑 Registration Book"
+            },
+            "created": "Registration Book {{ param }} 创建成功",
+            "updated": "Registration Book {{ param }} 更新成功",
+            "deleted": "Registration Book {{ param }} 删除成功",
+            "delete": {
+                "question": "你确定要删除 Registration Book {{ id }} 吗？"
+            },
+            "detail": {
+                "title": "Registration Book"
+            },
+            "userId": "User Id",
+            "userName": "User Name",
+            "mobilePhone": "Mobile Phone",
+            "idCard": "Id Card",
+            "deptId": "Dept Id",
+            "deptName": "Dept Name",
+            "doctorId": "Doctor Id",
+            "doctorName": "Doctor Name",
+            "consultId": "Consult Id",
+            "consultName": "Consult Name",
+            "consultNo": "Consult No",
+            "visitDateTime": "Visit Date Time",
+            "createdBy": "Created By",
+            "createdDate": "Created Date",
+            "lastModifiedBy": "Last Modified By",
+            "lastModifiedDate": "Last Modified Date"
+        }
+    }
+}

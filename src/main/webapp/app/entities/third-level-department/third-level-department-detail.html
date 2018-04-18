@@ -1,0 +1,59 @@
+
+<div>
+    <h2><span data-translate="registrationBookApp.thirdLevelDepartment.detail.title">Third Level Department</span> {{vm.thirdLevelDepartment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.deptName">Dept Name</span></dt>
+        <dd>
+            <span>{{vm.thirdLevelDepartment.deptName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.deptEnglishName">Dept English Name</span></dt>
+        <dd>
+            <span>{{vm.thirdLevelDepartment.deptEnglishName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.appointmentable">Appointmentable</span></dt>
+        <dd>
+            <span>{{vm.thirdLevelDepartment.appointmentable}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.thirdLevelDepartment.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.thirdLevelDepartment.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.thirdLevelDepartment.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.thirdLevelDepartment.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.doctor">Doctor</span></dt>
+        <dd>
+            <span ng-repeat="doctor in vm.thirdLevelDepartment.doctors">
+                <a ui-sref="doctor-detail({id: doctor.id})">{{doctor.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.thirdLevelDepartment.secondLevelDept">Second Level Dept</span></dt>
+        <dd>
+            <span ng-repeat="secondLevelDept in vm.thirdLevelDepartment.secondLevelDepts">
+                <a ui-sref="second-level-department-detail({id: secondLevelDept.id})">{{secondLevelDept.id}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="third-level-department-detail.edit({id:vm.thirdLevelDepartment.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

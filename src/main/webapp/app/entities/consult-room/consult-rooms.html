@@ -1,0 +1,74 @@
+<div>
+    <h2 data-translate="registrationBookApp.consultRoom.home.title">Consult Rooms</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="consult-room.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="registrationBookApp.consultRoom.home.createLabel">
+                        Create new Consult Room
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="consultRoomName"><span data-translate="registrationBookApp.consultRoom.consultRoomName">Consult Room Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="consultRoomNo"><span data-translate="registrationBookApp.consultRoom.consultRoomNo">Consult Room No</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdBy"><span data-translate="registrationBookApp.consultRoom.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="createdDate"><span data-translate="registrationBookApp.consultRoom.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.consultRoom.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.consultRoom.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="deptId"><span data-translate="registrationBookApp.consultRoom.dept">Dept</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="consultRoom in vm.consultRooms track by consultRoom.id">
+                    <td><a ui-sref="consult-room-detail({id:consultRoom.id})">{{consultRoom.id}}</a></td>
+                    <td>{{consultRoom.consultRoomName}}</td>
+                    <td>{{consultRoom.consultRoomNo}}</td>
+                    <td>{{consultRoom.createdBy}}</td>
+                    <td>{{consultRoom.createdDate | date:'medium'}}</td>
+                    <td>{{consultRoom.lastModifiedBy}}</td>
+                    <td>{{consultRoom.lastModifiedDate | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="third-level-department-detail({id:consultRoom.deptId})">{{consultRoom.deptId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="consult-room-detail({id:consultRoom.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="consult-room.edit({id:consultRoom.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="consult-room.delete({id:consultRoom.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>

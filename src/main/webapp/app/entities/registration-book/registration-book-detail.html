@@ -1,0 +1,83 @@
+
+<div>
+    <h2><span data-translate="registrationBookApp.registrationBook.detail.title">Registration Book</span> {{vm.registrationBook.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="registrationBookApp.registrationBook.userId">User Id</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.userId}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.userName">User Name</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.userName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.mobilePhone">Mobile Phone</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.mobilePhone}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.idCard">Id Card</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.idCard}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.deptId">Dept Id</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.deptId}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.deptName">Dept Name</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.deptName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.doctorId">Doctor Id</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.doctorId}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.doctorName">Doctor Name</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.doctorName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.consultId">Consult Id</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.consultId}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.consultName">Consult Name</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.consultName}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.consultNo">Consult No</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.consultNo}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.visitDateTime">Visit Date Time</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.visitDateTime | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.createdBy">Created By</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.createdBy}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.createdDate">Created Date</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.createdDate | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.lastModifiedBy}}</span>
+        </dd>
+        <dt><span data-translate="registrationBookApp.registrationBook.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+            <span>{{vm.registrationBook.lastModifiedDate | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="registration-book-detail.edit({id:vm.registrationBook.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
