@@ -44,6 +44,8 @@
         },
         "form": {
             "username": "Username",
+            "last-name": "last-name",
+            "first-name": "first-name",
             "username.placeholder": "Your username",
             "newpassword": "New password",
             "newpassword.placeholder": "New password",

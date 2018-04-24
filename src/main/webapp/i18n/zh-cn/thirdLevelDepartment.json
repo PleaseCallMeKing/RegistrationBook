@@ -2,29 +2,29 @@
     "registrationBookApp": {
         "thirdLevelDepartment" : {
             "home": {
-                "title": "Third Level Departments",
-                "createLabel": "创建新 Third Level Department",
-                "createOrEditLabel": "创建或编辑 Third Level Department"
+                "title": "三级科室",
+                "createLabel": "创建新 三级科室",
+                "createOrEditLabel": "创建或编辑 三级科室"
             },
-            "created": "Third Level Department {{ param }} 创建成功",
-            "updated": "Third Level Department {{ param }} 更新成功",
-            "deleted": "Third Level Department {{ param }} 删除成功",
+            "created": "三级科室 {{ param }} 创建成功",
+            "updated": "三级科室 {{ param }} 更新成功",
+            "deleted": "三级科室 {{ param }} 删除成功",
             "delete": {
-                "question": "你确定要删除 Third Level Department {{ id }} 吗？"
+                "question": "你确定要删除 三级科室 {{ id }} 吗？"
             },
             "detail": {
-                "title": "Third Level Department"
+                "title": "三级科室"
             },
-            "deptName": "Dept Name",
-            "deptEnglishName": "Dept English Name",
-            "appointmentable": "Appointmentable",
-            "createdBy": "Created By",
-            "createdDate": "Created Date",
-            "lastModifiedBy": "Last Modified By",
-            "lastModifiedDate": "Last Modified Date",
-            "rooms": "Rooms",
-            "doctor": "Doctor",
-            "secondLevelDept": "Second Level Dept"
+            "deptName": "三级科室名",
+            "deptEnglishName": "三级科室英文名",
+            "appointmentable": "是否可预约",
+            "createdBy": "创建人",
+            "createdDate": "创建时间",
+            "lastModifiedBy": "最后修改人",
+            "lastModifiedDate": "最后修改时间",
+            "rooms": "诊室",
+            "doctor": "医生",
+            "secondLevelDept": "所属二级科室"
         }
     }
 }

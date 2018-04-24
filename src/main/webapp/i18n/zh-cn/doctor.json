@@ -2,32 +2,32 @@
     "registrationBookApp": {
         "doctor" : {
             "home": {
-                "title": "Doctors",
-                "createLabel": "创建新 Doctor",
-                "createOrEditLabel": "创建或编辑 Doctor"
+                "title": "医生",
+                "createLabel": "创建新 医生",
+                "createOrEditLabel": "创建或编辑 医生"
             },
-            "created": "Doctor {{ param }} 创建成功",
-            "updated": "Doctor {{ param }} 更新成功",
-            "deleted": "Doctor {{ param }} 删除成功",
+            "created": "医生 {{ param }} 创建成功",
+            "updated": "医生 {{ param }} 更新成功",
+            "deleted": "医生 {{ param }} 删除成功",
             "delete": {
-                "question": "你确定要删除 Doctor {{ id }} 吗？"
+                "question": "你确定要删除 医生 {{ id }} 吗？"
             },
             "detail": {
-                "title": "Doctor"
+                "title": "医生"
             },
-            "userId": "User Id",
-            "fullName": "Full Name",
-            "gender": "Gender",
-            "nationality": "Nationality",
-            "imgurl": "Imgurl",
-            "profession": "Profession",
-            "mobilephone": "Mobilephone",
-            "active": "Active",
-            "createdBy": "Created By",
-            "createdDate": "Created Date",
-            "lastModifiedBy": "Last Modified By",
-            "lastModifiedDate": "Last Modified Date",
-            "dept": "Dept"
+            "userId": "用户 Id",
+            "fullName": "用户全名",
+            "gender": "性别",
+            "nationality": "民族",
+            "imgurl": "图片路径",
+            "profession": "专业",
+            "mobilephone": "手机号",
+            "active": "是否启用",
+            "createdBy": "创建人",
+            "createdDate": "创建时间",
+            "lastModifiedBy": "最后修改人",
+            "lastModifiedDate": "最后修改时间",
+            "dept": "科室"
         }
     }
 }

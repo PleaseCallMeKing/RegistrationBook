@@ -50,7 +50,12 @@
             "confirmpassword": "新密码确认",
             "confirmpassword.placeholder": "确认您的新密码",
             "email": "电子邮件",
-            "email.placeholder": "您的电子邮件"
+            "email.placeholder": "您的电子邮件",
+            "last-name": "姓氏",
+            "last-name.placeholder": "您的姓氏",
+            "first-name": "名字",
+            "first-name.placeholder": "您的名字"
+
         },
         "messages": {
             "info": {

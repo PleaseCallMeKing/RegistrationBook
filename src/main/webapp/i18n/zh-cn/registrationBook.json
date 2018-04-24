@@ -2,35 +2,35 @@
     "registrationBookApp": {
         "registrationBook" : {
             "home": {
-                "title": "Registration Books",
-                "createLabel": "创建新 Registration Book",
-                "createOrEditLabel": "创建或编辑 Registration Book"
+                "title": "门诊预约",
+                "createLabel": "创建新 门诊预约",
+                "createOrEditLabel": "创建或编辑 门诊预约"
             },
-            "created": "Registration Book {{ param }} 创建成功",
-            "updated": "Registration Book {{ param }} 更新成功",
-            "deleted": "Registration Book {{ param }} 删除成功",
+            "created": "门诊预约 {{ param }} 创建成功",
+            "updated": "门诊预约 {{ param }} 更新成功",
+            "deleted": "门诊预约 {{ param }} 删除成功",
             "delete": {
-                "question": "你确定要删除 Registration Book {{ id }} 吗？"
+                "question": "你确定要删除 门诊预约 {{ id }} 吗？"
             },
             "detail": {
-                "title": "Registration Book"
+                "title": "门诊预约"
             },
-            "userId": "User Id",
-            "userName": "User Name",
-            "mobilePhone": "Mobile Phone",
-            "idCard": "Id Card",
-            "deptId": "Dept Id",
-            "deptName": "Dept Name",
-            "doctorId": "Doctor Id",
-            "doctorName": "Doctor Name",
-            "consultId": "Consult Id",
-            "consultName": "Consult Name",
-            "consultNo": "Consult No",
-            "visitDateTime": "Visit Date Time",
-            "createdBy": "Created By",
-            "createdDate": "Created Date",
-            "lastModifiedBy": "Last Modified By",
-            "lastModifiedDate": "Last Modified Date"
+            "userId": "用户 Id",
+            "userName": "用户名",
+            "mobilePhone": "手机号",
+            "idCard": "身份证号",
+            "deptId": "科室 Id",
+            "deptName": "科室名",
+            "doctorId": "医生 Id",
+            "doctorName": "医生名",
+            "consultId": "诊室 Id",
+            "consultName": "诊室名",
+            "consultNo": "诊室编号",
+            "visitDateTime": "预约时间",
+            "createdBy": "创建人",
+            "createdDate": "创建时间",
+            "lastModifiedBy": "最后修改人",
+            "lastModifiedDate": "最后修改时间"
         }
     }
 }

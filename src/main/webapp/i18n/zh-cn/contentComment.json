@@ -2,31 +2,31 @@
     "registrationBookApp": {
         "contentComment" : {
             "home": {
-                "title": "Content Comments",
-                "createLabel": "创建新 Content Comment",
-                "createOrEditLabel": "创建或编辑 Content Comment"
+                "title": "评论",
+                "createLabel": "创建新 评论",
+                "createOrEditLabel": "创建或编辑 评论"
             },
-            "created": "Content Comment {{ param }} 创建成功",
-            "updated": "Content Comment {{ param }} 更新成功",
-            "deleted": "Content Comment {{ param }} 删除成功",
+            "created": "评论 {{ param }} 创建成功",
+            "updated": "评论 {{ param }} 更新成功",
+            "deleted": "评论 {{ param }} 删除成功",
             "delete": {
-                "question": "你确定要删除 Content Comment {{ id }} 吗？"
+                "question": "你确定要删除 评论 {{ id }} 吗？"
             },
             "detail": {
-                "title": "Content Comment"
+                "title": "评论"
             },
-            "contentType": "Content Type",
-            "contentId": "Content Id",
-            "contentName": "Content Name",
-            "floorNumber": "Floor Number",
-            "userId": "User Id",
-            "userName": "User Name",
-            "content": "Content",
-            "createdBy": "Created By",
-            "createdDate": "Created Date",
-            "lastModifiedBy": "Last Modified By",
-            "lastModifiedDate": "Last Modified Date",
-            "replys": "Replys"
+            "contentType": "评论类型",
+            "contentId": "评论Id",
+            "contentName": "评论名称",
+            "floorNumber": "楼层编号",
+            "userId": "用户Id",
+            "userName": "用户名",
+            "content": "内容",
+            "createdBy": "创建人",
+            "createdDate": "创建时间",
+            "lastModifiedBy": "最后修改人",
+            "lastModifiedDate": "最后修改时间",
+            "replys": "回复"
         }
     }
 }

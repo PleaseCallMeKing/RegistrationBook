@@ -50,6 +50,17 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="control-label" for="last-name" data-translate="global.form.last-name">last-name</label>
+                    <input type="text" class="form-control" id="last-name" name="last-name" placeholder="{{'global.form.last-name.placeholder' | translate}}"
+                           ng-model="vm.registerAccount.lastName" ng-minlength=1 ng-maxlength=200 required>
+                    <!--<div ng-show="">-->
+                        <!--<p class="help-block"-->
+                           <!--ng-show="" data-translate="global.messages.validate.last-name.required">-->
+                            <!--Your last-name is required.-->
+                        <!--</p>-->
+                    <!--</div>-->
+                </div>
+                <div class="form-group">
                     <label class="control-label" for="email" data-translate="global.form.email">Email</label>
                     <input type="email" class="form-control" id="email" name="email" placeholder="{{'global.form.email.placeholder' | translate}}"
                            ng-model="vm.registerAccount.email" ng-minlength=5 ng-maxlength=100 required>

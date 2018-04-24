@@ -2,26 +2,26 @@
     "registrationBookApp": {
         "secondLevelDepartment" : {
             "home": {
-                "title": "Second Level Departments",
-                "createLabel": "创建新 Second Level Department",
-                "createOrEditLabel": "创建或编辑 Second Level Department"
+                "title": "二级科室",
+                "createLabel": "创建新 二级科室",
+                "createOrEditLabel": "创建或编辑 二级科室"
             },
-            "created": "Second Level Department {{ param }} 创建成功",
-            "updated": "Second Level Department {{ param }} 更新成功",
-            "deleted": "Second Level Department {{ param }} 删除成功",
+            "created": "二级科室 {{ param }} 创建成功",
+            "updated": "二级科室 {{ param }} 更新成功",
+            "deleted": "二级科室 {{ param }} 删除成功",
             "delete": {
-                "question": "你确定要删除 Second Level Department {{ id }} 吗？"
+                "question": "你确定要删除 二级科室 {{ id }} 吗？"
             },
             "detail": {
-                "title": "Second Level Department"
+                "title": "二级科室"
             },
-            "deptName": "Dept Name",
-            "deptEnglishName": "Dept English Name",
-            "createdBy": "Created By",
-            "createdDate": "Created Date",
-            "lastModifiedBy": "Last Modified By",
-            "lastModifiedDate": "Last Modified Date",
-            "dept": "Dept"
+            "deptName": "二级科室名",
+            "deptEnglishName": "二级科室英文名",
+            "createdBy": "创建人",
+            "createdDate": "创建时间",
+            "lastModifiedBy": "最后修改人",
+            "lastModifiedDate": "最后修改时间",
+            "dept": "三级科室"
         }
     }
 }
