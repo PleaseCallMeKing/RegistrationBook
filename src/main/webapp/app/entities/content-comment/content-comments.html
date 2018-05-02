@@ -4,12 +4,12 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-4 no-padding-left">
-                <button class="btn btn-primary" ui-sref="content-comment.new" >
-                    <span class="glyphicon glyphicon-plus"></span>
-                    <span  data-translate="registrationBookApp.contentComment.home.createLabel">
-                        Create new Content Comment
-                    </span>
-                </button>
+                <!--<button class="btn btn-primary" ui-sref="content-comment.new" >-->
+                    <!--<span class="glyphicon glyphicon-plus"></span>-->
+                    <!--<span  data-translate="registrationBookApp.contentComment.home.createLabel">-->
+                        <!--Create new Content Comment-->
+                    <!--</span>-->
+                <!--</button>-->
             </div>
         </div>
     </div>
@@ -26,10 +26,10 @@
                     <th jh-sort-by="userId"><span data-translate="registrationBookApp.contentComment.userId">User Id</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="userName"><span data-translate="registrationBookApp.contentComment.userName">User Name</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="content"><span data-translate="registrationBookApp.contentComment.content">Content</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdBy"><span data-translate="registrationBookApp.contentComment.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdDate"><span data-translate="registrationBookApp.contentComment.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.contentComment.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.contentComment.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdBy"><span data-translate="registrationBookApp.contentComment.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="createdDate"><span data-translate="registrationBookApp.contentComment.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.contentComment.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.contentComment.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
                     <th></th>
                 </tr>
             </thead>
@@ -43,10 +43,10 @@
                     <td>{{contentComment.userId}}</td>
                     <td>{{contentComment.userName}}</td>
                     <td>{{contentComment.content}}</td>
-                    <td>{{contentComment.createdBy}}</td>
-                    <td>{{contentComment.createdDate | date:'medium'}}</td>
-                    <td>{{contentComment.lastModifiedBy}}</td>
-                    <td>{{contentComment.lastModifiedDate | date:'medium'}}</td>
+                    <!--<td>{{contentComment.createdBy}}</td>-->
+                    <!--<td>{{contentComment.createdDate | date:'medium'}}</td>-->
+                    <!--<td>{{contentComment.lastModifiedBy}}</td>-->
+                    <!--<td>{{contentComment.lastModifiedDate | date:'medium'}}</td>-->
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"
@@ -55,12 +55,12 @@
                                 <span class="glyphicon glyphicon-eye-open"></span>
                                 <span class="hidden-sm-down" data-translate="entity.action.view"></span>
                             </button>
-                            <button type="submit"
-                                    ui-sref="content-comment.edit({id:contentComment.id})"
-                                    class="btn btn-primary btn-sm">
-                                <span class="glyphicon glyphicon-pencil"></span>
-                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
-                            </button>
+                            <!--<button type="submit"-->
+                                    <!--ui-sref="content-comment.edit({id:contentComment.id})"-->
+                                    <!--class="btn btn-primary btn-sm">-->
+                                <!--<span class="glyphicon glyphicon-pencil"></span>-->
+                                <!--<span class="hidden-sm-down" data-translate="entity.action.edit"></span>-->
+                            <!--</button>-->
                             <button type="submit"
                                     ui-sref="content-comment.delete({id:contentComment.id})"
                                     class="btn btn-danger btn-sm">

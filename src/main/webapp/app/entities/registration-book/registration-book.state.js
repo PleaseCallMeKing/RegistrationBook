@@ -109,8 +109,8 @@
             }]
         })
         .state('registration-book.new', {
-            parent: 'registration-book',
-            url: '/new',
+            parent: 'home',
+            url: '/registration-book/new',
             data: {
                 authorities: ['ROLE_USER']
             },
@@ -136,18 +136,13 @@
                                 consultName: null,
                                 consultNo: null,
                                 visitDateTime: null,
-                                createdBy: null,
-                                createdDate: null,
-                                lastModifiedBy: null,
-                                lastModifiedDate: null,
-                                id: null
                             };
                         }
                     }
                 }).result.then(function() {
-                    $state.go('registration-book', null, { reload: 'registration-book' });
+                    $state.go('home', null, { reload: 'home' });
                 }, function() {
-                    $state.go('registration-book');
+                    $state.go('home');
                 });
             }]
         })

@@ -22,10 +22,10 @@
                     <th jh-sort-by="consultRoomName"><span data-translate="registrationBookApp.consultRoom.consultRoomName">Consult Room Name</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="consultRoomNo"><span data-translate="registrationBookApp.consultRoom.consultRoomNo">Consult Room No</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="createdBy"><span data-translate="registrationBookApp.consultRoom.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdDate"><span data-translate="registrationBookApp.consultRoom.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.consultRoom.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.consultRoom.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="deptId"><span data-translate="registrationBookApp.consultRoom.dept">Dept</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdDate"><span data-translate="registrationBookApp.consultRoom.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.consultRoom.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.consultRoom.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="deptId"><span data-translate="registrationBookApp.consultRoom.dept">Dept</span> <span class="glyphicon glyphicon-sort"></span></th>-->
                     <th></th>
                 </tr>
             </thead>
@@ -34,10 +34,10 @@
                     <td><a ui-sref="consult-room-detail({id:consultRoom.id})">{{consultRoom.id}}</a></td>
                     <td>{{consultRoom.consultRoomName}}</td>
                     <td>{{consultRoom.consultRoomNo}}</td>
-                    <td>{{consultRoom.createdBy}}</td>
-                    <td>{{consultRoom.createdDate | date:'medium'}}</td>
-                    <td>{{consultRoom.lastModifiedBy}}</td>
-                    <td>{{consultRoom.lastModifiedDate | date:'medium'}}</td>
+                    <!--<td>{{consultRoom.createdBy}}</td>-->
+                    <!--<td>{{consultRoom.createdDate | date:'medium'}}</td>-->
+                    <!--<td>{{consultRoom.lastModifiedBy}}</td>-->
+                    <!--<td>{{consultRoom.lastModifiedDate | date:'medium'}}</td>-->
                     <td>
                         <a ui-sref="third-level-department-detail({id:consultRoom.deptId})">{{consultRoom.deptId}}</a>
                     </td>

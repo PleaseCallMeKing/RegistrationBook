@@ -18,7 +18,7 @@
         <table class="jh-table table table-striped">
             <thead>
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
-                    <!--<th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="deptName"><span data-translate="registrationBookApp.secondLevelDepartment.deptName">Dept Name</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="deptEnglishName"><span data-translate="registrationBookApp.secondLevelDepartment.deptEnglishName">Dept English Name</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <!--<th jh-sort-by="createdBy"><span data-translate="registrationBookApp.secondLevelDepartment.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
@@ -33,10 +33,10 @@
                     <td><a ui-sref="second-level-department-detail({id:secondLevelDepartment.id})">{{secondLevelDepartment.id}}</a></td>
                     <td>{{secondLevelDepartment.deptName}}</td>
                     <td>{{secondLevelDepartment.deptEnglishName}}</td>
-                    <td>{{secondLevelDepartment.createdBy}}</td>
-                    <td>{{secondLevelDepartment.createdDate | date:'medium'}}</td>
-                    <td>{{secondLevelDepartment.lastModifiedBy}}</td>
-                    <td>{{secondLevelDepartment.lastModifiedDate | date:'medium'}}</td>
+                    <!--<td>{{secondLevelDepartment.createdBy}}</td>-->
+                    <!--<td>{{secondLevelDepartment.createdDate | date:'medium'}}</td>-->
+                    <!--<td>{{secondLevelDepartment.lastModifiedBy}}</td>-->
+                    <!--<td>{{secondLevelDepartment.lastModifiedDate | date:'medium'}}</td>-->
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

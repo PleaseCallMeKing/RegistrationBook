@@ -78,4 +78,19 @@ public class RegistrationBookService {
         log.debug("Request to delete RegistrationBook : {}", id);
         registrationBookRepository.delete(id);
     }
+
+    @Transactional(readOnly = true)
+    public  Page<RegistrationBookDTO> findAllByUserId(Long userId, Pageable pageable) {
+        log.debug("Request to get all RegistrationBooks by userId", userId);
+        return registrationBookRepository.findAllByUserId(userId, pageable)
+            .map(registrationBookMapper::toDto);
+    }
+
+    @Transactional(readOnly = true)
+    public  Page<RegistrationBookDTO> findAllByDoctorId(Long doctorId, Pageable pageable) {
+        log.debug("Request to get all RegistrationBooks by doctor", doctorId);
+        return registrationBookRepository.findAllByDoctorId(doctorId, pageable)
+            .map(registrationBookMapper::toDto);
+    }
+
 }

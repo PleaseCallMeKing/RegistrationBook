@@ -11,15 +11,11 @@
             <div ng-switch="vm.isAuthenticated()">
                 <!--<div class="alert alert-success" ng-switch-when="true" data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}">-->
                 <div class="alert alert-success" ng-switch-when="true">
-                    <div data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}"></div>
-                    <!--<button class="btn btn-primary" ui-sref="registration-book.new" >-->
-                    <button class="btn btn-primary" ui-sref="registration-book.new" >
-                        <span class="glyphicon glyphicon-plus"></span>
-                        <span  data-translate="registrationBookApp.registrationBook.home.createLabel">
-                        Create new Registration Book
-                    </span>
-                    </button>
-
+                    <div style="padding-right: 20px " data-translate="home.logged.message" translate-values="{username: '{{vm.account.login}}'}"></div>
+                    <a ui-sref="registration-book.new">预约挂号</a><br>
+                    <a ui-sref="second-level-department-detail">查看科室</a><br>
+                    <a ui-sref="doctor">查看医生</a><br>
+                    <a ui-sref="">我的挂号预约</a>
                 </div>
 
                 <div class="alert alert-warning" ng-switch-when="false" data-translate="global.messages.info.authenticated" translate-compile>

@@ -125,4 +125,34 @@ public class RegistrationBookResource {
         registrationBookService.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
+
+    /**
+     *
+     * @param userId
+     * @param pageable
+     * @return
+     */
+    @GetMapping("/user/{userId}/registration-books")
+    @Timed
+    public ResponseEntity<List<RegistrationBookDTO>> getAllRegistrationBooksByUserId(@PathVariable Long userId,@ApiParam Pageable pageable) {
+        log.debug("REST request to get a page of RegistrationBooks by userId: {}", userId);
+        Page<RegistrationBookDTO> page = registrationBookService.findAllByUserId(userId, pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/user/" + userId + "/registration-books");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
+
+    /**
+     *
+     * @param doctorId
+     * @param pageable
+     * @return
+     */
+    @GetMapping("/doctor/{doctorId}/registration-books")
+    @Timed
+    public ResponseEntity<List<RegistrationBookDTO>> getAllRegistrationBooksByDoctorId(@PathVariable Long doctorId,@ApiParam Pageable pageable) {
+        log.debug("REST request to get a page of RegistrationBooks by doctorId: {}", doctorId);
+        Page<RegistrationBookDTO> page = registrationBookService.findAllByDoctorId(doctorId, pageable);
+        HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/doctor/" + doctorId + "/registration-books");
+        return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
+    }
 }
