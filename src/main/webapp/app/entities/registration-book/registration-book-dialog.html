@@ -57,15 +57,9 @@
         <!--</div>-->
         <div class="form-group">
             <label class="control-label" data-translate="registrationBookApp.registrationBook.deptName" for="field_deptName">Dept Name</label>
-            <input type="text" class="form-control" name="deptName" id="field_deptName"
-                    ng-model="vm.registrationBook.deptName"
-                    ng-maxlength="250"/>
-            <div ng-show="editForm.deptName.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.deptName.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="250">
-                    This field cannot be longer than 250 characters.
-                </p>
-            </div>
+            <select name="" id="" ng-change="getDoctorName" ng-model="vm.departments.consultRoomName" ng-options=" departments.consultRoomName as departments.consultRoomName for departments in vm.departments">
+
+            </select>
         </div>
         <!--<div class="form-group">-->
             <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.doctorId" for="field_doctorId">Doctor Id</label>-->
@@ -103,12 +97,12 @@
                 <!--</p>-->
             <!--</div>-->
         <!--</div>-->
-        <div class="form-group">
-            <label class="control-label" data-translate="registrationBookApp.registrationBook.consultNo" for="field_consultNo">Consult No</label>
-            <input type="number" class="form-control" name="consultNo" id="field_consultNo"
-                    ng-model="vm.registrationBook.consultNo"
-                    />
-        </div>
+        <!--<div class="form-group">-->
+            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.consultNo" for="field_consultNo">Consult No</label>-->
+            <!--<input type="number" class="form-control" name="consultNo" id="field_consultNo"-->
+                    <!--ng-model="vm.registrationBook.consultNo"-->
+                    <!--/>-->
+        <!--</div>-->
         <div class="form-group">
             <label class="control-label" data-translate="registrationBookApp.registrationBook.visitDateTime" for="field_visitDateTime">Visit Date Time</label>
                 <div class="input-group">

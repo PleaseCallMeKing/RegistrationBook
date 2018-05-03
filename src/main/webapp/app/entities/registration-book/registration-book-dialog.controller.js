@@ -5,9 +5,9 @@
         .module('registrationBookApp')
         .controller('RegistrationBookDialogController', RegistrationBookDialogController);
 
-    RegistrationBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'RegistrationBook'];
+    RegistrationBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'RegistrationBook','$resource'];
 
-    function RegistrationBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, RegistrationBook) {
+    function RegistrationBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, RegistrationBook,$resource) {
         var vm = this;
 
         vm.registrationBook = entity;
@@ -49,6 +49,28 @@
 
         function openCalendar (date) {
             vm.datePickerOpenStatus[date] = true;
+        }
+
+
+        var departments = $resource("/api/third-level-departments", {},{"submit":{method:"get",isArray: true}});
+
+        departments.submit({}, onsuccess);
+        function onsuccess(data) {
+            vm.departments = data;
+        }
+
+        vm.getDoctorName = function () {
+
+        }
+
+        var doctors = $resource("/api/doctors", {},{"submit":{method:"get",isArray: true}});
+
+        doctors.submit({}, onsuccess);
+        function onsuccess(data) {
+            vm.doctors = data;
+            // if(){
+            //
+            // }
         }
     }
 })();
