@@ -19,7 +19,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "content_comment_reply")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-public class ContentCommentReply implements Serializable {
+public class ContentCommentReply extends AbstractAuditingEntity {
 
     private static final long serialVersionUID = 1L;
 
@@ -66,20 +66,6 @@ public class ContentCommentReply implements Serializable {
     @ApiModelProperty(value = "回复内容", required = true)
     @Column(name = "content", length = 2048, nullable = false)
     private String content;
-
-    @Size(max = 50)
-    @Column(name = "created_by", length = 50)
-    private String createdBy;
-
-    @Column(name = "created_date")
-    private Instant createdDate;
-
-    @Size(max = 50)
-    @Column(name = "last_modified_by", length = 50)
-    private String lastModifiedBy;
-
-    @Column(name = "last_modified_date")
-    private Instant lastModifiedDate;
 
     @ManyToOne
     private ContentComment contentComment;
@@ -158,58 +144,6 @@ public class ContentCommentReply implements Serializable {
         this.content = content;
     }
 
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public ContentCommentReply createdBy(String createdBy) {
-        this.createdBy = createdBy;
-        return this;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Instant getCreatedDate() {
-        return createdDate;
-    }
-
-    public ContentCommentReply createdDate(Instant createdDate) {
-        this.createdDate = createdDate;
-        return this;
-    }
-
-    public void setCreatedDate(Instant createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public String getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public ContentCommentReply lastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-        return this;
-    }
-
-    public void setLastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
-
-    public Instant getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    public ContentCommentReply lastModifiedDate(Instant lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-        return this;
-    }
-
-    public void setLastModifiedDate(Instant lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-    }
-
     public ContentComment getContentComment() {
         return contentComment;
     }
@@ -221,6 +155,26 @@ public class ContentCommentReply implements Serializable {
 
     public void setContentComment(ContentComment contentComment) {
         this.contentComment = contentComment;
+    }
+
+    public ContentCommentReply createdBy(String createdBy) {
+        this.setCreatedBy(createdBy);
+        return this;
+    }
+
+    public ContentCommentReply createdDate(Instant createdDate) {
+        this.setCreatedDate(createdDate);
+        return this;
+    }
+
+    public ContentCommentReply lastModifiedBy(String lastModifiedBy) {
+        this.setLastModifiedBy(lastModifiedBy);
+        return this;
+    }
+
+    public ContentCommentReply lastModifiedDate(Instant lastModifiedDate) {
+        this.setLastModifiedDate(lastModifiedDate);
+        return this;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

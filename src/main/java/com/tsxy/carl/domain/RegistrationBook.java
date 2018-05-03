@@ -20,7 +20,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "registration_book")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-public class RegistrationBook implements Serializable {
+public class RegistrationBook extends AbstractAuditingEntity {
 
     private static final long serialVersionUID = 1L;
 
@@ -116,20 +116,6 @@ public class RegistrationBook implements Serializable {
     @ApiModelProperty(value = "就诊时间")
     @Column(name = "visit_date_time")
     private ZonedDateTime visitDateTime;
-
-    @Size(max = 50)
-    @Column(name = "created_by", length = 50)
-    private String createdBy;
-
-    @Column(name = "created_date")
-    private Instant createdDate;
-
-    @Size(max = 50)
-    @Column(name = "last_modified_by", length = 50)
-    private String lastModifiedBy;
-
-    @Column(name = "last_modified_date")
-    private Instant lastModifiedDate;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -296,56 +282,24 @@ public class RegistrationBook implements Serializable {
         this.visitDateTime = visitDateTime;
     }
 
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
     public RegistrationBook createdBy(String createdBy) {
-        this.createdBy = createdBy;
+        this.setCreatedBy(createdBy);
         return this;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Instant getCreatedDate() {
-        return createdDate;
     }
 
     public RegistrationBook createdDate(Instant createdDate) {
-        this.createdDate = createdDate;
+        this.setCreatedDate(createdDate);
         return this;
-    }
-
-    public void setCreatedDate(Instant createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public String getLastModifiedBy() {
-        return lastModifiedBy;
     }
 
     public RegistrationBook lastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
+        this.setLastModifiedBy(lastModifiedBy);
         return this;
-    }
-
-    public void setLastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
-
-    public Instant getLastModifiedDate() {
-        return lastModifiedDate;
     }
 
     public RegistrationBook lastModifiedDate(Instant lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
+        this.setLastModifiedDate(lastModifiedDate);
         return this;
-    }
-
-    public void setLastModifiedDate(Instant lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

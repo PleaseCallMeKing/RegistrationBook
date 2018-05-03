@@ -19,7 +19,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "consult_room")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-public class ConsultRoom implements Serializable {
+public class ConsultRoom extends AbstractAuditingEntity {
 
     private static final long serialVersionUID = 1L;
 
@@ -41,20 +41,6 @@ public class ConsultRoom implements Serializable {
     @ApiModelProperty(value = "诊室编号")
     @Column(name = "consult_room_no")
     private Integer consultRoomNo;
-
-    @Size(max = 50)
-    @Column(name = "created_by", length = 50)
-    private String createdBy;
-
-    @Column(name = "created_date")
-    private Instant createdDate;
-
-    @Size(max = 50)
-    @Column(name = "last_modified_by", length = 50)
-    private String lastModifiedBy;
-
-    @Column(name = "last_modified_date")
-    private Instant lastModifiedDate;
 
     @ManyToOne
     private ThirdLevelDepartment dept;
@@ -94,59 +80,7 @@ public class ConsultRoom implements Serializable {
         this.consultRoomNo = consultRoomNo;
     }
 
-    public String getCreatedBy() {
-        return createdBy;
-    }
-
-    public ConsultRoom createdBy(String createdBy) {
-        this.createdBy = createdBy;
-        return this;
-    }
-
-    public void setCreatedBy(String createdBy) {
-        this.createdBy = createdBy;
-    }
-
-    public Instant getCreatedDate() {
-        return createdDate;
-    }
-
-    public ConsultRoom createdDate(Instant createdDate) {
-        this.createdDate = createdDate;
-        return this;
-    }
-
-    public void setCreatedDate(Instant createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public String getLastModifiedBy() {
-        return lastModifiedBy;
-    }
-
-    public ConsultRoom lastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-        return this;
-    }
-
-    public void setLastModifiedBy(String lastModifiedBy) {
-        this.lastModifiedBy = lastModifiedBy;
-    }
-
-    public Instant getLastModifiedDate() {
-        return lastModifiedDate;
-    }
-
-    public ConsultRoom lastModifiedDate(Instant lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-        return this;
-    }
-
-    public void setLastModifiedDate(Instant lastModifiedDate) {
-        this.lastModifiedDate = lastModifiedDate;
-    }
-
-    public ThirdLevelDepartment getDept() {
+       public ThirdLevelDepartment getDept() {
         return dept;
     }
 
@@ -157,6 +91,26 @@ public class ConsultRoom implements Serializable {
 
     public void setDept(ThirdLevelDepartment thirdLevelDepartment) {
         this.dept = thirdLevelDepartment;
+    }
+
+    public ConsultRoom createdBy(String createdBy) {
+        this.setCreatedBy(createdBy);
+        return this;
+    }
+
+    public ConsultRoom createdDate(Instant createdDate) {
+        this.setCreatedDate(createdDate);
+        return this;
+    }
+
+    public ConsultRoom lastModifiedBy(String lastModifiedBy) {
+        this.setLastModifiedBy(lastModifiedBy);
+        return this;
+    }
+
+    public ConsultRoom lastModifiedDate(Instant lastModifiedDate) {
+        this.setLastModifiedDate(lastModifiedDate);
+        return this;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

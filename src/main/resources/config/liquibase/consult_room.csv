@@ -1,0 +1,5 @@
+id;consult_room_name;consult_room_no;dept_id;created_by;created_date;last_modified_by;last_modified_date
+1;骨科1号诊室;001001;1;system;2018-04-01 12:00:00;system;2018-04-01 12:00:00
+2;骨科2号诊室;001002;1;system;2018-04-01 12:00:00;system;2018-04-01 12:00:00
+3;皮肤科3号诊室;001003;5;system;2018-04-01 12:00:00;system;2018-04-01 12:00:00
+4;皮肤科1号诊室;001004;5;system;2018-04-01 12:00:00;system;2018-04-01 12:00:00
