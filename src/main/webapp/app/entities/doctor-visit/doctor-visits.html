@@ -21,10 +21,10 @@
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="visitData"><span data-translate="registrationBookApp.doctorVisit.visitData">Visit Data</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="visitEndData"><span data-translate="registrationBookApp.doctorVisit.visitEndData">Visit End Data</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdBy"><span data-translate="registrationBookApp.doctorVisit.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="createdDate"><span data-translate="registrationBookApp.doctorVisit.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.doctorVisit.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.doctorVisit.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <!--<th jh-sort-by="createdBy"><span data-translate="registrationBookApp.doctorVisit.createdBy">Created By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="createdDate"><span data-translate="registrationBookApp.doctorVisit.createdDate">Created Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedBy"><span data-translate="registrationBookApp.doctorVisit.lastModifiedBy">Last Modified By</span> <span class="glyphicon glyphicon-sort"></span></th>-->
+                    <!--<th jh-sort-by="lastModifiedDate"><span data-translate="registrationBookApp.doctorVisit.lastModifiedDate">Last Modified Date</span> <span class="glyphicon glyphicon-sort"></span></th>-->
                     <th jh-sort-by="doctorId"><span data-translate="registrationBookApp.doctorVisit.doctor">Doctor</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="roomId"><span data-translate="registrationBookApp.doctorVisit.room">Room</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
@@ -35,15 +35,15 @@
                     <td><a ui-sref="doctor-visit-detail({id:doctorVisit.id})">{{doctorVisit.id}}</a></td>
                     <td>{{doctorVisit.visitData | date:'medium'}}</td>
                     <td>{{doctorVisit.visitEndData | date:'medium'}}</td>
-                    <td>{{doctorVisit.createdBy}}</td>
-                    <td>{{doctorVisit.createdDate | date:'medium'}}</td>
-                    <td>{{doctorVisit.lastModifiedBy}}</td>
-                    <td>{{doctorVisit.lastModifiedDate | date:'medium'}}</td>
+                    <!--<td>{{doctorVisit.createdBy}}</td>-->
+                    <!--<td>{{doctorVisit.createdDate | date:'medium'}}</td>-->
+                    <!--<td>{{doctorVisit.lastModifiedBy}}</td>-->
+                    <!--<td>{{doctorVisit.lastModifiedDate | date:'medium'}}</td>-->
                     <td>
-                        <a ui-sref="doctor-detail({id:doctorVisit.doctorId})">{{doctorVisit.doctorId}}</a>
+                        <a ui-sref="doctor-detail({id:doctorVisit.doctorId})">{{doctorVisit.doctorName}}</a>
                     </td>
                     <td>
-                        <a ui-sref="consult-room-detail({id:doctorVisit.roomId})">{{doctorVisit.roomId}}</a>
+                        <a ui-sref="consult-room-detail({id:doctorVisit.roomId})">{{doctorVisit.roomName}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

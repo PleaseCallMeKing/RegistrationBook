@@ -12,29 +12,29 @@
         <dd>
             <span>{{vm.doctorVisit.visitEndData | date:'medium'}}</span>
         </dd>
-        <dt><span data-translate="registrationBookApp.doctorVisit.createdBy">Created By</span></dt>
-        <dd>
-            <span>{{vm.doctorVisit.createdBy}}</span>
-        </dd>
-        <dt><span data-translate="registrationBookApp.doctorVisit.createdDate">Created Date</span></dt>
-        <dd>
-            <span>{{vm.doctorVisit.createdDate | date:'medium'}}</span>
-        </dd>
-        <dt><span data-translate="registrationBookApp.doctorVisit.lastModifiedBy">Last Modified By</span></dt>
-        <dd>
-            <span>{{vm.doctorVisit.lastModifiedBy}}</span>
-        </dd>
-        <dt><span data-translate="registrationBookApp.doctorVisit.lastModifiedDate">Last Modified Date</span></dt>
-        <dd>
-            <span>{{vm.doctorVisit.lastModifiedDate | date:'medium'}}</span>
-        </dd>
+        <!--<dt><span data-translate="registrationBookApp.doctorVisit.createdBy">Created By</span></dt>-->
+        <!--<dd>-->
+            <!--<span>{{vm.doctorVisit.createdBy}}</span>-->
+        <!--</dd>-->
+        <!--<dt><span data-translate="registrationBookApp.doctorVisit.createdDate">Created Date</span></dt>-->
+        <!--<dd>-->
+            <!--<span>{{vm.doctorVisit.createdDate | date:'medium'}}</span>-->
+        <!--</dd>-->
+        <!--<dt><span data-translate="registrationBookApp.doctorVisit.lastModifiedBy">Last Modified By</span></dt>-->
+        <!--<dd>-->
+            <!--<span>{{vm.doctorVisit.lastModifiedBy}}</span>-->
+        <!--</dd>-->
+        <!--<dt><span data-translate="registrationBookApp.doctorVisit.lastModifiedDate">Last Modified Date</span></dt>-->
+        <!--<dd>-->
+            <!--<span>{{vm.doctorVisit.lastModifiedDate | date:'medium'}}</span>-->
+        <!--</dd>-->
         <dt><span data-translate="registrationBookApp.doctorVisit.doctor">Doctor</span></dt>
         <dd>
-            <a ui-sref="doctor-detail({id:vm.doctorVisit.doctorId})">{{vm.doctorVisit.doctorId}}</a>
+            <a ui-sref="doctor-detail({id:vm.doctorVisit.doctorId})">{{vm.doctorVisit.doctorName}}</a>
         </dd>
         <dt><span data-translate="registrationBookApp.doctorVisit.room">Room</span></dt>
         <dd>
-            <a ui-sref="consult-room-detail({id:vm.doctorVisit.roomId})">{{vm.doctorVisit.roomId}}</a>
+            <a ui-sref="consult-room-detail({id:vm.doctorVisit.roomId})">{{vm.doctorVisit.roomName}}</a>
         </dd>
     </dl>
 
