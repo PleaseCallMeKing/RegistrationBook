@@ -28,6 +28,13 @@
                 </li>
 
                 <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
+                <!--出诊时间安排-->
+                <li ng-class="{active: vm.$state.includes('doctor')}" ng-switch-when="true" has-authority="ROLE_DOCTOR" uib-dropdown class="dropdown pointer">
+                    <a ui-sref="doctor-visit" ng-click="vm.collapseNavbar()">
+                        <span class="glyphicon glyphicon-asterisk"></span>
+                        <span class="hidden-sm" data-translate="global.menu.doctorVisit">Doctor Visit</span>
+                    </a>
+                </li>
                 <!--数据栏-->
                 <li ng-class="{active: vm.$state.includes('admin')}" ng-switch-when="true" has-authority="ROLE_ADMIN" uib-dropdown class="dropdown pointer">
                 <!--<li ng-class="{active: vm.$state.includes('admin')}"  ng-switch-when="true" has-authority="ROLE_ADMIN" uib-dropdown class="dropdown pointer">-->
@@ -83,6 +90,12 @@
                                 <a ui-sref="second-level-department" ng-click="vm.collapseNavbar()">
                                     <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                     <span data-translate="global.menu.entities.secondLevelDepartment">Second Level Department</span>
+                                </a>
+                            </li>
+                        <li ui-sref-active="active">
+                                <a ui-sref="doctor-visit" ng-click="vm.collapseNavbar()">
+                                    <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                    <span data-translate="global.menu.entities.doctorVisit">Doctor Visit</span>
                                 </a>
                             </li>
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->

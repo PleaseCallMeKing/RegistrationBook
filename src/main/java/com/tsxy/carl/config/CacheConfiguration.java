@@ -57,6 +57,9 @@ public class CacheConfiguration {
             cm.createCache(com.tsxy.carl.domain.ThirdLevelDepartment.class.getName() + ".secondLevelDepts", jcacheConfiguration);
             cm.createCache(com.tsxy.carl.domain.SecondLevelDepartment.class.getName(), jcacheConfiguration);
             cm.createCache(com.tsxy.carl.domain.SecondLevelDepartment.class.getName() + ".depts", jcacheConfiguration);
+            cm.createCache(com.tsxy.carl.domain.Doctor.class.getName() + ".doctorVisits", jcacheConfiguration);
+            cm.createCache(com.tsxy.carl.domain.ConsultRoom.class.getName() + ".doctorVisits", jcacheConfiguration);
+            cm.createCache(com.tsxy.carl.domain.DoctorVisit.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

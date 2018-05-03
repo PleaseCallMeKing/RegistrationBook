@@ -12,7 +12,8 @@ import org.mapstruct.*;
 public interface ConsultRoomMapper extends EntityMapper<ConsultRoomDTO, ConsultRoom> {
 
     @Mapping(source = "dept.id", target = "deptId")
-    ConsultRoomDTO toDto(ConsultRoom consultRoom); 
+    @Mapping(source = "dept.deptName", target = "deptName")
+    ConsultRoomDTO toDto(ConsultRoom consultRoom);
 
     @Mapping(source = "deptId", target = "dept")
     ConsultRoom toEntity(ConsultRoomDTO consultRoomDTO);

@@ -21,7 +21,8 @@
             "createdDate": "创建时间",
             "lastModifiedBy": "最后修改人",
             "lastModifiedDate": "最后修改时间",
-            "dept": "科室"
+            "dept": "科室",
+            "doctorVisit": "此诊室医生出诊记录"
         }
     }
 }

@@ -16,6 +16,8 @@
                 "secondLevelThirdLevelDepartment": "Second Level Third Level Department",
                 "thirdLevelDepartment": "Third Level Department",
                 "secondLevelDepartment": "Second Level Department",
+                "doctorVisit": "Doctor Visit",
+                "doctorVist": "Doctor Vist",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

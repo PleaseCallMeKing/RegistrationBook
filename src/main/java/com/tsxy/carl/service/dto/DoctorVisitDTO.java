@@ -2,6 +2,7 @@ package com.tsxy.carl.service.dto;
 
 
 import java.time.Instant;
+import java.time.ZonedDateTime;
 import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -9,16 +10,15 @@ import java.util.Set;
 import java.util.Objects;
 
 /**
- * A DTO for the ConsultRoom entity.
+ * A DTO for the DoctorVisit entity.
  */
-public class ConsultRoomDTO implements Serializable {
+public class DoctorVisitDTO implements Serializable {
 
     private Long id;
 
-    @Size(max = 250)
-    private String consultRoomName;
+    private ZonedDateTime visitData;
 
-    private Integer consultRoomNo;
+    private ZonedDateTime visitEndData;
 
     @Size(max = 50)
     private String createdBy;
@@ -30,9 +30,13 @@ public class ConsultRoomDTO implements Serializable {
 
     private Instant lastModifiedDate;
 
-    private Long deptId;
+    private Long doctorId;
 
-    private String deptName;
+    private String doctorName;
+
+    private Long roomId;
+
+    private String roomName;
 
     public Long getId() {
         return id;
@@ -42,20 +46,20 @@ public class ConsultRoomDTO implements Serializable {
         this.id = id;
     }
 
-    public String getConsultRoomName() {
-        return consultRoomName;
+    public ZonedDateTime getVisitData() {
+        return visitData;
     }
 
-    public void setConsultRoomName(String consultRoomName) {
-        this.consultRoomName = consultRoomName;
+    public void setVisitData(ZonedDateTime visitData) {
+        this.visitData = visitData;
     }
 
-    public Integer getConsultRoomNo() {
-        return consultRoomNo;
+    public ZonedDateTime getVisitEndData() {
+        return visitEndData;
     }
 
-    public void setConsultRoomNo(Integer consultRoomNo) {
-        this.consultRoomNo = consultRoomNo;
+    public void setVisitEndData(ZonedDateTime visitEndData) {
+        this.visitEndData = visitEndData;
     }
 
     public String getCreatedBy() {
@@ -90,20 +94,36 @@ public class ConsultRoomDTO implements Serializable {
         this.lastModifiedDate = lastModifiedDate;
     }
 
-    public Long getDeptId() {
-        return deptId;
+    public Long getDoctorId() {
+        return doctorId;
     }
 
-    public void setDeptId(Long thirdLevelDepartmentId) {
-        this.deptId = thirdLevelDepartmentId;
+    public void setDoctorId(Long doctorId) {
+        this.doctorId = doctorId;
     }
 
-    public String getDeptName() {
-        return deptName;
+    public Long getRoomId() {
+        return roomId;
     }
 
-    public void setDeptName(String deptName) {
-        this.deptName = deptName;
+    public void setRoomId(Long consultRoomId) {
+        this.roomId = consultRoomId;
+    }
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
     @Override
@@ -115,11 +135,11 @@ public class ConsultRoomDTO implements Serializable {
             return false;
         }
 
-        ConsultRoomDTO consultRoomDTO = (ConsultRoomDTO) o;
-        if(consultRoomDTO.getId() == null || getId() == null) {
+        DoctorVisitDTO doctorVisitDTO = (DoctorVisitDTO) o;
+        if(doctorVisitDTO.getId() == null || getId() == null) {
             return false;
         }
-        return Objects.equals(getId(), consultRoomDTO.getId());
+        return Objects.equals(getId(), doctorVisitDTO.getId());
     }
 
     @Override
@@ -129,10 +149,10 @@ public class ConsultRoomDTO implements Serializable {
 
     @Override
     public String toString() {
-        return "ConsultRoomDTO{" +
+        return "DoctorVisitDTO{" +
             "id=" + getId() +
-            ", consultRoomName='" + getConsultRoomName() + "'" +
-            ", consultRoomNo='" + getConsultRoomNo() + "'" +
+            ", visitData='" + getVisitData() + "'" +
+            ", visitEndData='" + getVisitEndData() + "'" +
             ", createdBy='" + getCreatedBy() + "'" +
             ", createdDate='" + getCreatedDate() + "'" +
             ", lastModifiedBy='" + getLastModifiedBy() + "'" +

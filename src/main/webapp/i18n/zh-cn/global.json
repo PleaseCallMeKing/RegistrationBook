@@ -16,6 +16,11 @@
                 "secondLevelThirdLevelDepartment": "二级下的三级科室",
                 "thirdLevelDepartment": "三级科室",
                 "secondLevelDepartment": "二级科室",
+                "doctor": "医生",
+                "consultRoom": "诊室",
+                "doctorVisit": "医生出诊安排",
+                "doctorVist": "Doctor Vist",
+                "doctorVisit": "Doctor Visit",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -40,7 +45,8 @@
                 "database": "数据库",
                 "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
             },
-            "language": "语言"
+            "language": "语言",
+            "doctorVisit": "医生出诊安排"
         },
         "form": {
             "username": "账号",
@@ -89,7 +95,7 @@
             "id" : "ID"
         },
         "ribbon": {
-            "dev":"Development"
+            "dev":"科室"
         },
         "item-count": "显示第 {{first}} - {{second}} 条，共 {{total}} 条"
     },
@@ -128,7 +134,7 @@
     "error": {
         "internalServerError": "Internal server error",
         "server.not.reachable": "服务器无法访问",
-        "url.not.found": "Not found",
+        "url.not.found": "没有找到",
         "NotNull": "域 {{fieldName}} 不能为空!",
         "Size": "域 {{fieldName}} 不满足最大/最小值限制!",
         "userexists": "该用户名已存在!",

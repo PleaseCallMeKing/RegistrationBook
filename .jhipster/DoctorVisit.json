@@ -1,0 +1,60 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "doctor",
+            "otherEntityName": "doctor",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "room",
+            "otherEntityName": "consultRoom",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "visitData",
+            "javadoc": "出诊时间",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "visitEndData",
+            "javadoc": "出诊结束时间",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "createdBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "createdDate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lastModifiedBy",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        },
+        {
+            "fieldName": "lastModifiedDate",
+            "fieldType": "Instant"
+        }
+    ],
+    "changelogDate": "20180503022449",
+    "dto": "mapstruct",
+    "service": "serviceClass",
+    "entityTableName": "doctor_visit",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination",
+    "javadoc": "医生出诊\n@author Carl Wang"
+}

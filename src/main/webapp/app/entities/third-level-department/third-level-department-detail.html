@@ -41,7 +41,7 @@
         <dt><span data-translate="registrationBookApp.thirdLevelDepartment.secondLevelDept">Second Level Dept</span></dt>
         <dd>
             <span ng-repeat="secondLevelDept in vm.thirdLevelDepartment.secondLevelDepts">
-                <a ui-sref="second-level-department-detail({id: secondLevelDept.id})">{{secondLevelDept.id}}</a>{{$last ? '' : ', '}}
+                <a ui-sref="second-level-department-detail({id: secondLevelDept.id})">{{secondLevelDept.deptName}}</a>{{$last ? '' : ', '}}
             </span>
         </dd>
     </dl>

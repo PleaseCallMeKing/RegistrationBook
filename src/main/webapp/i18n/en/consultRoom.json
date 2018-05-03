@@ -21,7 +21,8 @@
             "createdDate": "Created Date",
             "lastModifiedBy": "Last Modified By",
             "lastModifiedDate": "Last Modified Date",
-            "dept": "Dept"
+            "dept": "Dept",
+            "doctorVisit": "Doctor Visit"
         }
     }
 }
