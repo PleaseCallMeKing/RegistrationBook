@@ -15,6 +15,7 @@
     <include file="config/liquibase/changelog/20180430214984_added_dept_to_SecondLevelDepartment.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180502321243_added_data_to_project_RegistrationBook.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180503022449_added_entity_DoctorVisit.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20180505091057_added_columns_to_User.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20180417031737_added_entity_constraints_ThirdLevelDepartment.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20180417031738_added_entity_constraints_ConsultRoom.xml" relativeToChangelogFile="false"/>

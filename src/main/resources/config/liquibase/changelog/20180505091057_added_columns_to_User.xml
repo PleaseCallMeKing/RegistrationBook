@@ -1,0 +1,71 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="carl.wang (generated)" id="1525511469308-1">
+        <addColumn tableName="jhi_user">
+            <column name="id_card" type="varchar(18)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-2">
+        <addColumn tableName="jhi_user">
+            <column name="mobile_phone" type="bigint"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-3">
+        <addNotNullConstraint columnDataType="varchar(50)" columnName="created_by" tableName="consult_room"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-4">
+        <addNotNullConstraint columnDataType="varchar(50)" columnName="created_by" tableName="content_comment"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-5">
+        <addNotNullConstraint columnDataType="varchar(50)" columnName="created_by" tableName="content_comment_reply"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-6">
+        <addNotNullConstraint columnDataType="varchar(50)" columnName="created_by" tableName="doctor"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-7">
+        <addNotNullConstraint columnDataType="varchar(50)" columnName="created_by" tableName="doctor_visit"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-8">
+        <addNotNullConstraint columnDataType="varchar(50)" columnName="created_by" tableName="registration_book"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-9">
+        <addNotNullConstraint columnDataType="varchar(50)" columnName="created_by" tableName="second_level_department"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-10">
+        <addNotNullConstraint columnDataType="varchar(50)" columnName="created_by" tableName="third_level_department"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-11">
+        <addNotNullConstraint columnDataType="timestamp" columnName="created_date" tableName="consult_room"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-12">
+        <addNotNullConstraint columnDataType="timestamp" columnName="created_date" tableName="content_comment"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-13">
+        <addNotNullConstraint columnDataType="timestamp" columnName="created_date" tableName="content_comment_reply"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-14">
+        <addNotNullConstraint columnDataType="timestamp" columnName="created_date" tableName="doctor"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-15">
+        <addNotNullConstraint columnDataType="timestamp" columnName="created_date" tableName="doctor_visit"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-16">
+        <addNotNullConstraint columnDataType="timestamp" columnName="created_date" tableName="registration_book"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-17">
+        <addNotNullConstraint columnDataType="timestamp" columnName="created_date" tableName="second_level_department"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-18">
+        <addNotNullConstraint columnDataType="timestamp" columnName="created_date" tableName="third_level_department"/>
+    </changeSet>
+    <changeSet author="carl.wang (generated)" id="1525511469308-19">
+        <sql dbms="mysql">
+            UPDATE jhi_user u
+            SET u.mobile_phone = 15230515282 WHERE u.mobile_phone is null;
+            UPDATE jhi_user u
+            SET u.id_card = "130181199310166477" WHERE u.id_card is null;
+        </sql>
+
+    </changeSet>
+
+</databaseChangeLog>

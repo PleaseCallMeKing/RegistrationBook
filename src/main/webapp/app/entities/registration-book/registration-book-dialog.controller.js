@@ -5,9 +5,11 @@
         .module('registrationBookApp')
         .controller('RegistrationBookDialogController', RegistrationBookDialogController);
 
-    RegistrationBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'RegistrationBook','$resource'];
+    RegistrationBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'RegistrationBook',
+        'ThirdLevelDepartment', '$resource'];
 
-    function RegistrationBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, RegistrationBook,$resource) {
+    function RegistrationBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, RegistrationBook,
+                                               ThirdLevelDepartment, $resource) {
         var vm = this;
 
         vm.registrationBook = entity;
@@ -15,6 +17,7 @@
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
+        vm.thirdLevelDepartments = ThirdLevelDepartment.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
@@ -26,6 +29,15 @@
 
         function save () {
             vm.isSaving = true;
+            vm.registrationBook.deptId = vm.thirdLevelDepartment.id;
+            vm.registrationBook.deptName = vm.thirdLevelDepartment.deptName;
+            vm.registrationBook.doctorId = vm.thirdLevelDepartment.doctor.id;
+            vm.registrationBook.doctorName = vm.thirdLevelDepartment.doctor.fullName;
+
+            vm.registrationBook.consultId = 5;
+            vm.registrationBook.consultName = 6;
+            vm.registrationBook.consultNo = 7;
+
             if (vm.registrationBook.id !== null) {
                 RegistrationBook.update(vm.registrationBook, onSaveSuccess, onSaveError);
             } else {
@@ -63,14 +75,14 @@
 
         }
 
-        var doctors = $resource("/api/doctors", {},{"submit":{method:"get",isArray: true}});
-
-        doctors.submit({}, onsuccess);
-        function onsuccess(data) {
-            vm.doctors = data;
-            // if(){
-            //
-            // }
-        }
+        // var doctors = $resource("/api/doctors", {},{"submit":{method:"get",isArray: true}});
+        //
+        // doctors.submit({}, onsuccess);
+        // function onsuccess(data) {
+        //     vm.doctors = data;
+        //     // if(){
+        //     //
+        //     // }
+        // }
     }
 })();

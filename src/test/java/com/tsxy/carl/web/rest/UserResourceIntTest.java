@@ -67,6 +67,12 @@ public class UserResourceIntTest {
     private static final String DEFAULT_LASTNAME = "doe";
     private static final String UPDATED_LASTNAME = "jhipsterLastName";
 
+    private static final Long DEFAULT_MOBILEPHONE = 15230515282L;
+    private static final Long UPDATED_MOBILEPHONE = 15230515282L;
+
+    private static final String DEFAULT_IDCARD = "130181199310166477";
+    private static final String UPDATED_IDCARD = "130181199310166477";
+
     private static final String DEFAULT_IMAGEURL = "http://placehold.it/50x50";
     private static final String UPDATED_IMAGEURL = "http://placehold.it/40x40";
 
@@ -150,6 +156,8 @@ public class UserResourceIntTest {
             DEFAULT_PASSWORD,
             DEFAULT_FIRSTNAME,
             DEFAULT_LASTNAME,
+            DEFAULT_MOBILEPHONE,
+            DEFAULT_IDCARD,
             DEFAULT_EMAIL,
             true,
             DEFAULT_IMAGEURL,
@@ -190,6 +198,8 @@ public class UserResourceIntTest {
             DEFAULT_PASSWORD,
             DEFAULT_FIRSTNAME,
             DEFAULT_LASTNAME,
+            DEFAULT_MOBILEPHONE,
+            DEFAULT_IDCARD,
             DEFAULT_EMAIL,
             true,
             DEFAULT_IMAGEURL,
@@ -226,6 +236,8 @@ public class UserResourceIntTest {
             DEFAULT_PASSWORD,
             DEFAULT_FIRSTNAME,
             DEFAULT_LASTNAME,
+            DEFAULT_MOBILEPHONE,
+            DEFAULT_IDCARD,
             "anothermail@localhost",
             true,
             DEFAULT_IMAGEURL,
@@ -262,6 +274,8 @@ public class UserResourceIntTest {
             DEFAULT_PASSWORD,
             DEFAULT_FIRSTNAME,
             DEFAULT_LASTNAME,
+            DEFAULT_MOBILEPHONE,
+            DEFAULT_IDCARD,
             DEFAULT_EMAIL, // this email should already be used
             true,
             DEFAULT_IMAGEURL,
@@ -345,6 +359,8 @@ public class UserResourceIntTest {
             UPDATED_PASSWORD,
             UPDATED_FIRSTNAME,
             UPDATED_LASTNAME,
+            UPDATED_MOBILEPHONE,
+            UPDATED_IDCARD,
             UPDATED_EMAIL,
             updatedUser.getActivated(),
             UPDATED_IMAGEURL,
@@ -389,6 +405,8 @@ public class UserResourceIntTest {
             UPDATED_PASSWORD,
             UPDATED_FIRSTNAME,
             UPDATED_LASTNAME,
+            UPDATED_MOBILEPHONE,
+            UPDATED_IDCARD,
             UPDATED_EMAIL,
             updatedUser.getActivated(),
             UPDATED_IMAGEURL,
@@ -444,6 +462,8 @@ public class UserResourceIntTest {
             updatedUser.getPassword(),
             updatedUser.getFirstName(),
             updatedUser.getLastName(),
+            updatedUser.getMobilePhone(),
+            updatedUser.getIdCard(),
             "jhipster@localhost",  // this email should already be used by anotherUser
             updatedUser.getActivated(),
             updatedUser.getImageUrl(),
@@ -488,6 +508,8 @@ public class UserResourceIntTest {
             updatedUser.getPassword(),
             updatedUser.getFirstName(),
             updatedUser.getLastName(),
+            updatedUser.getMobilePhone(),
+            updatedUser.getIdCard(),
             updatedUser.getEmail(),
             updatedUser.getActivated(),
             updatedUser.getImageUrl(),
@@ -561,6 +583,8 @@ public class UserResourceIntTest {
             DEFAULT_LOGIN,
             DEFAULT_FIRSTNAME,
             DEFAULT_LASTNAME,
+            DEFAULT_MOBILEPHONE,
+            DEFAULT_IDCARD,
             DEFAULT_EMAIL,
             true,
             DEFAULT_IMAGEURL,

@@ -50,7 +50,7 @@ public class RegistrationBookResource {
      */
     @PostMapping("/registration-books")
     @Timed
-    public ResponseEntity<RegistrationBookDTO> createRegistrationBook(@Valid @RequestBody RegistrationBookDTO registrationBookDTO) throws URISyntaxException {
+    public ResponseEntity<RegistrationBookDTO> createRegistrationBook(@Valid @RequestBody RegistrationBookDTO registrationBookDTO) throws Exception {
         log.debug("REST request to save RegistrationBook : {}", registrationBookDTO);
         if (registrationBookDTO.getId() != null) {
             throw new BadRequestAlertException("A new registrationBook cannot already have an ID", ENTITY_NAME, "idexists");
@@ -72,7 +72,7 @@ public class RegistrationBookResource {
      */
     @PutMapping("/registration-books")
     @Timed
-    public ResponseEntity<RegistrationBookDTO> updateRegistrationBook(@Valid @RequestBody RegistrationBookDTO registrationBookDTO) throws URISyntaxException {
+    public ResponseEntity<RegistrationBookDTO> updateRegistrationBook(@Valid @RequestBody RegistrationBookDTO registrationBookDTO) throws Exception {
         log.debug("REST request to update RegistrationBook : {}", registrationBookDTO);
         if (registrationBookDTO.getId() == null) {
             return createRegistrationBook(registrationBookDTO);

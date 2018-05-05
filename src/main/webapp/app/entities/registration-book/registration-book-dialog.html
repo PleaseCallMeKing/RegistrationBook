@@ -57,27 +57,13 @@
         <!--</div>-->
         <div class="form-group">
             <label class="control-label" data-translate="registrationBookApp.registrationBook.deptName" for="field_deptName">Dept Name</label>
-            <select name="" id="" ng-change="getDoctorName" ng-model="vm.departments.consultRoomName" ng-options=" departments.consultRoomName as departments.consultRoomName for departments in vm.departments">
-
+            <select class="form-control" name="deptName" id="field_deptName" ng-model="vm.thirdLevelDepartment" ng-options="thirdLevelDepartment as thirdLevelDepartment.deptName for thirdLevelDepartment in vm.thirdLevelDepartments track by thirdLevelDepartment.id">
             </select>
         </div>
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.doctorId" for="field_doctorId">Doctor Id</label>-->
-            <!--<input type="number" class="form-control" name="doctorId" id="field_doctorId"-->
-                    <!--ng-model="vm.registrationBook.doctorId"-->
-                    <!--/>-->
-        <!--</div>-->
         <div class="form-group">
             <label class="control-label" data-translate="registrationBookApp.registrationBook.doctorName" for="field_doctorName">Doctor Name</label>
-            <input type="text" class="form-control" name="doctorName" id="field_doctorName"
-                    ng-model="vm.registrationBook.doctorName"
-                    ng-maxlength="50"/>
-            <div ng-show="editForm.doctorName.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.doctorName.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">
-                    This field cannot be longer than 50 characters.
-                </p>
-            </div>
+            <select class="form-control" name="doctorName" id="field_doctorName" ng-model="vm.thirdLevelDepartment.doctor" ng-options="doctor as doctor.fullName for doctor in vm.thirdLevelDepartment.doctors track by doctor.id">
+            </select>
         </div>
         <!--<div class="form-group">-->
             <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.consultId" for="field_consultId">Consult Id</label>-->

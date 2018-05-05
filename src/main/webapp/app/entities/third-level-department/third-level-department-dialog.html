@@ -97,7 +97,7 @@
         </div>
         <div class="form-group">
             <label data-translate="registrationBookApp.thirdLevelDepartment.secondLevelDept" for="field_secondLevelDept">Second Level Dept</label>
-            <select class="form-control" id="field_secondLevelDept" multiple name="secondLevelDept" ng-model="vm.thirdLevelDepartment.secondLevelDepts" ng-options="secondLevelDepartment as secondLevelDepartment.id for secondLevelDepartment in vm.secondleveldepartments track by secondLevelDepartment.id"></select>
+            <select class="form-control" id="field_secondLevelDept" multiple name="secondLevelDept" ng-model="vm.thirdLevelDepartment.secondLevelDepts" ng-options="secondLevelDepartment as secondLevelDepartment.deptName for secondLevelDepartment in vm.secondleveldepartments track by secondLevelDepartment.deptName"></select>
         </div>
     </div>
     <div class="modal-footer">

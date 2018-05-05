@@ -31,6 +31,12 @@ public class UserDTO {
     @Size(max = 50)
     private String lastName;
 
+    @NotNull
+    private Long mobilePhone;
+
+    @NotNull
+    private String idCard;
+
     @Email
     @Size(min = 5, max = 100)
     private String email;
@@ -58,14 +64,14 @@ public class UserDTO {
     }
 
     public UserDTO(User user) {
-        this(user.getId(), user.getLogin(), user.getFirstName(), user.getLastName(),
+        this(user.getId(), user.getLogin(), user.getFirstName(), user.getLastName(), user.getMobilePhone(), user.getIdCard(),
             user.getEmail(), user.getActivated(), user.getImageUrl(), user.getLangKey(),
             user.getCreatedBy(), user.getCreatedDate(), user.getLastModifiedBy(), user.getLastModifiedDate(),
             user.getAuthorities().stream().map(Authority::getName)
                 .collect(Collectors.toSet()));
     }
 
-    public UserDTO(Long id, String login, String firstName, String lastName,
+    public UserDTO(Long id, String login, String firstName, String lastName, Long mobilePhone, String idCard,
         String email, boolean activated, String imageUrl, String langKey,
         String createdBy, Instant createdDate, String lastModifiedBy, Instant lastModifiedDate,
         Set<String> authorities) {
@@ -107,6 +113,14 @@ public class UserDTO {
 
     public String getLastName() {
         return lastName;
+    }
+
+    public Long getMobilePhone() {
+        return mobilePhone;
+    }
+
+    public String getIdCard() {
+        return idCard;
     }
 
     public String getEmail() {
@@ -155,6 +169,8 @@ public class UserDTO {
             "login='" + login + '\'' +
             ", firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
+            ", mobilePhone='" + mobilePhone + '\'' +
+            ", idCard='" + idCard + '\'' +
             ", email='" + email + '\'' +
             ", imageUrl='" + imageUrl + '\'' +
             ", activated=" + activated +
