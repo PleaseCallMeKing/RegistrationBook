@@ -1,6 +1,7 @@
 package com.tsxy.carl.service;
 
 import com.tsxy.carl.domain.DoctorVisit;
+import com.tsxy.carl.repository.DoctorRepository;
 import com.tsxy.carl.repository.DoctorVisitRepository;
 import com.tsxy.carl.service.dto.DoctorVisitDTO;
 import com.tsxy.carl.service.mapper.DoctorVisitMapper;
@@ -10,6 +11,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 
 /**
@@ -25,9 +28,12 @@ public class DoctorVisitService {
 
     private final DoctorVisitMapper doctorVisitMapper;
 
-    public DoctorVisitService(DoctorVisitRepository doctorVisitRepository, DoctorVisitMapper doctorVisitMapper) {
+    private final DoctorRepository doctorRepository;
+
+    public DoctorVisitService(DoctorVisitRepository doctorVisitRepository, DoctorVisitMapper doctorVisitMapper, DoctorRepository doctorRepository) {
         this.doctorVisitRepository = doctorVisitRepository;
         this.doctorVisitMapper = doctorVisitMapper;
+        this.doctorRepository = doctorRepository;
     }
 
     /**
@@ -77,5 +83,10 @@ public class DoctorVisitService {
     public void delete(Long id) {
         log.debug("Request to delete DoctorVisit : {}", id);
         doctorVisitRepository.delete(id);
+    }
+
+    public List<DoctorVisitDTO> findAllByDoctorId(Long doctorId){
+        log.debug("Request to get all DoctorVisit by doctorId: {}", doctorId);
+        return doctorVisitMapper.toDto(doctorVisitRepository.findAllByDoctor(doctorRepository.findOne(doctorId)));
     }
 }

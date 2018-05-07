@@ -101,6 +101,8 @@ public class UserService {
         newUser.setPassword(encryptedPassword);
         newUser.setFirstName(userDTO.getFirstName());
         newUser.setLastName(userDTO.getLastName());
+        newUser.setMobilePhone(userDTO.getMobilePhone());
+        newUser.setIdCard(userDTO.getIdCard());
         newUser.setEmail(userDTO.getEmail());
         newUser.setImageUrl(userDTO.getImageUrl());
         newUser.setLangKey(userDTO.getLangKey());

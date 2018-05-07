@@ -7,9 +7,7 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "数据管理",
-                "doctor": "医生",
                 "department": "科室",
-                "consultRoom": "诊室",
                 "registrationBook": "预约挂号",
                 "contentComment": "评论",
                 "contentCommentReply": "评论回复",
@@ -20,7 +18,6 @@
                 "consultRoom": "诊室",
                 "doctorVisit": "医生出诊安排",
                 "doctorVist": "Doctor Vist",
-                "doctorVisit": "Doctor Visit",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
@@ -60,7 +57,11 @@
             "last-name": "姓氏",
             "last-name.placeholder": "您的姓氏",
             "first-name": "名字",
-            "first-name.placeholder": "您的名字"
+            "first-name.placeholder": "您的名字",
+            "id-card": "身份证号",
+            "id-card.placeholder": "您的身份证号",
+            "mobile-phone": "手机号",
+            "mobile-phone.placeholder": "您的手机号"
 
         },
         "messages": {

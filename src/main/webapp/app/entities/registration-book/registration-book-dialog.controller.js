@@ -5,10 +5,12 @@
         .module('registrationBookApp')
         .controller('RegistrationBookDialogController', RegistrationBookDialogController);
 
-    RegistrationBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'RegistrationBook',
+    RegistrationBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity',
+         'RegistrationBook','AlertService','Principal',
         'ThirdLevelDepartment', '$resource'];
 
-    function RegistrationBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, RegistrationBook,
+    function RegistrationBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity,
+                                               RegistrationBook,AlertService,Principal,
                                                ThirdLevelDepartment, $resource) {
         var vm = this;
 
@@ -33,10 +35,14 @@
             vm.registrationBook.deptName = vm.thirdLevelDepartment.deptName;
             vm.registrationBook.doctorId = vm.thirdLevelDepartment.doctor.id;
             vm.registrationBook.doctorName = vm.thirdLevelDepartment.doctor.fullName;
-
-            vm.registrationBook.consultId = 5;
-            vm.registrationBook.consultName = 6;
-            vm.registrationBook.consultNo = 7;
+            //
+            // vm.registrationBook.consultId = vm.doctorVisit.roomId;
+            // vm.registrationBook.consultName = vm.doctorVisit.roomName;
+            // vm.registrationBook.consultNo = vm.doctorVisit.roomNo;
+            Principal.identity().then(function(account) {
+                vm.account = account;
+                loadDoctorVisitData();
+            });
 
             if (vm.registrationBook.id !== null) {
                 RegistrationBook.update(vm.registrationBook, onSaveSuccess, onSaveError);
@@ -64,25 +70,19 @@
         }
 
 
-        var departments = $resource("/api/third-level-departments", {},{"submit":{method:"get",isArray: true}});
 
-        departments.submit({}, onsuccess);
-        function onsuccess(data) {
-            vm.departments = data;
+        function loadDoctorVisitData() {
+
+            var DoctorVisitData = $resource("api/doctor/" + vm.thirdLevelDepartment.doctor.id + "/doctor-visits", {});
+
+            DoctorVisitData.query({}, onSuccess, onError);
+            function onSuccess(data) {
+                vm.doctorVisits = data;
+            }
+            function onError(error) {
+                AlertService.error(error.data.message);
+            }
+
         }
-
-        vm.getDoctorName = function () {
-
-        }
-
-        // var doctors = $resource("/api/doctors", {},{"submit":{method:"get",isArray: true}});
-        //
-        // doctors.submit({}, onsuccess);
-        // function onsuccess(data) {
-        //     vm.doctors = data;
-        //     // if(){
-        //     //
-        //     // }
-        // }
     }
 })();

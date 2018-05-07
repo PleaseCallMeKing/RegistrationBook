@@ -38,6 +38,8 @@ public class DoctorVisitDTO implements Serializable {
 
     private String roomName;
 
+    private Integer roomNo;
+
     public Long getId() {
         return id;
     }
@@ -124,6 +126,14 @@ public class DoctorVisitDTO implements Serializable {
 
     public void setRoomName(String roomName) {
         this.roomName = roomName;
+    }
+
+    public Integer getRoomNo() {
+        return roomNo;
+    }
+
+    public void setRoomNo(Integer roomNo) {
+        this.roomNo = roomNo;
     }
 
     @Override

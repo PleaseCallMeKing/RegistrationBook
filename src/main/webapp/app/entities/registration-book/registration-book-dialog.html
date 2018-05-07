@@ -13,48 +13,6 @@
             <input type="text" class="form-control" id="id" name="id"
                     ng-model="vm.registrationBook.id" readonly />
         </div>
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.userId" for="field_userId">User Id</label>-->
-            <!--<input type="number" class="form-control" name="userId" id="field_userId"-->
-                    <!--ng-model="vm.registrationBook.userId"-->
-                    <!--/>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.userName" for="field_userName">User Name</label>-->
-            <!--<input type="text" class="form-control" name="userName" id="field_userName"-->
-                    <!--ng-model="vm.registrationBook.userName"-->
-                    <!--ng-maxlength="50"/>-->
-            <!--<div ng-show="editForm.userName.$invalid">-->
-                <!--<p class="help-block"-->
-                    <!--ng-show="editForm.userName.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">-->
-                    <!--This field cannot be longer than 50 characters.-->
-                <!--</p>-->
-            <!--</div>-->
-        <!--</div>-->
-        <div class="form-group">
-            <label class="control-label" data-translate="registrationBookApp.registrationBook.mobilePhone" for="field_mobilePhone">Mobile Phone</label>
-            <input type="number" class="form-control" name="mobilePhone" id="field_mobilePhone"
-                    ng-model="vm.registrationBook.mobilePhone"
-                    />
-        </div>
-        <div class="form-group">
-            <label class="control-label" data-translate="registrationBookApp.registrationBook.idCard" for="field_idCard">Id Card</label>
-            <input type="text" class="form-control" name="idCard" id="field_idCard"
-                    ng-model="vm.registrationBook.idCard"
-                    ng-maxlength="18"/>
-            <div ng-show="editForm.idCard.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.idCard.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="18">
-                    This field cannot be longer than 18 characters.
-                </p>
-            </div>
-        </div>
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.deptId" for="field_deptId">Dept Id</label>-->
-            <!--<input type="number" class="form-control" name="deptId" id="field_deptId"-->
-                    <!--ng-model="vm.registrationBook.deptId"-->
-                    <!--/>-->
-        <!--</div>-->
         <div class="form-group">
             <label class="control-label" data-translate="registrationBookApp.registrationBook.deptName" for="field_deptName">Dept Name</label>
             <select class="form-control" name="deptName" id="field_deptName" ng-model="vm.thirdLevelDepartment" ng-options="thirdLevelDepartment as thirdLevelDepartment.deptName for thirdLevelDepartment in vm.thirdLevelDepartments track by thirdLevelDepartment.id">
@@ -65,84 +23,12 @@
             <select class="form-control" name="doctorName" id="field_doctorName" ng-model="vm.thirdLevelDepartment.doctor" ng-options="doctor as doctor.fullName for doctor in vm.thirdLevelDepartment.doctors track by doctor.id">
             </select>
         </div>
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.consultId" for="field_consultId">Consult Id</label>-->
-            <!--<input type="number" class="form-control" name="consultId" id="field_consultId"-->
-                    <!--ng-model="vm.registrationBook.consultId"-->
-                    <!--/>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.consultName" for="field_consultName">Consult Name</label>-->
-            <!--<input type="text" class="form-control" name="consultName" id="field_consultName"-->
-                    <!--ng-model="vm.registrationBook.consultName"-->
-                    <!--ng-maxlength="250"/>-->
-            <!--<div ng-show="editForm.consultName.$invalid">-->
-                <!--<p class="help-block"-->
-                    <!--ng-show="editForm.consultName.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="250">-->
-                    <!--This field cannot be longer than 250 characters.-->
-                <!--</p>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.consultNo" for="field_consultNo">Consult No</label>-->
-            <!--<input type="number" class="form-control" name="consultNo" id="field_consultNo"-->
-                    <!--ng-model="vm.registrationBook.consultNo"-->
-                    <!--/>-->
-        <!--</div>-->
         <div class="form-group">
             <label class="control-label" data-translate="registrationBookApp.registrationBook.visitDateTime" for="field_visitDateTime">Visit Date Time</label>
-                <div class="input-group">
-                    <input id="field_visitDateTime" type="text" class="form-control" name="visitDateTime" datetime-picker="{{dateformat}}" ng-model="vm.registrationBook.visitDateTime" is-open="vm.datePickerOpenStatus.visitDateTime"
-                    />
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('visitDateTime')"><i class="glyphicon glyphicon-calendar"></i></button>
-                    </span>
-                </div>
+            <select class="form-control" name="visitDateTime" id="field_visitDateTime" ng-model="vm.doctorVisit" ng-options="doctorVisit as doctorVisit.visitData for doctorVisit in vm.doctorVisits track by doctorVisit.id">
+            </select>
+            {{vm.doctorVisits}}
         </div>
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.createdBy" for="field_createdBy">Created By</label>-->
-            <!--<input type="text" class="form-control" name="createdBy" id="field_createdBy"-->
-                    <!--ng-model="vm.registrationBook.createdBy"-->
-                    <!--ng-maxlength="50"/>-->
-            <!--<div ng-show="editForm.createdBy.$invalid">-->
-                <!--<p class="help-block"-->
-                    <!--ng-show="editForm.createdBy.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">-->
-                    <!--This field cannot be longer than 50 characters.-->
-                <!--</p>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.createdDate" for="field_createdDate">Created Date</label>-->
-                <!--<div class="input-group">-->
-                    <!--<input id="field_createdDate" type="text" class="form-control" name="createdDate" datetime-picker="{{dateformat}}" ng-model="vm.registrationBook.createdDate" is-open="vm.datePickerOpenStatus.createdDate"-->
-                    <!--/>-->
-                    <!--<span class="input-group-btn">-->
-                        <!--<button type="button" class="btn btn-default" ng-click="vm.openCalendar('createdDate')"><i class="glyphicon glyphicon-calendar"></i></button>-->
-                    <!--</span>-->
-                <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.lastModifiedBy" for="field_lastModifiedBy">Last Modified By</label>-->
-            <!--<input type="text" class="form-control" name="lastModifiedBy" id="field_lastModifiedBy"-->
-                    <!--ng-model="vm.registrationBook.lastModifiedBy"-->
-                    <!--ng-maxlength="50"/>-->
-            <!--<div ng-show="editForm.lastModifiedBy.$invalid">-->
-                <!--<p class="help-block"-->
-                    <!--ng-show="editForm.lastModifiedBy.$error.maxlength" data-translate="entity.validation.maxlength" translate-value-max="50">-->
-                    <!--This field cannot be longer than 50 characters.-->
-                <!--</p>-->
-            <!--</div>-->
-        <!--</div>-->
-        <!--<div class="form-group">-->
-            <!--<label class="control-label" data-translate="registrationBookApp.registrationBook.lastModifiedDate" for="field_lastModifiedDate">Last Modified Date</label>-->
-                <!--<div class="input-group">-->
-                    <!--<input id="field_lastModifiedDate" type="text" class="form-control" name="lastModifiedDate" datetime-picker="{{dateformat}}" ng-model="vm.registrationBook.lastModifiedDate" is-open="vm.datePickerOpenStatus.lastModifiedDate"-->
-                    <!--/>-->
-                    <!--<span class="input-group-btn">-->
-                        <!--<button type="button" class="btn btn-default" ng-click="vm.openCalendar('lastModifiedDate')"><i class="glyphicon glyphicon-calendar"></i></button>-->
-                    <!--</span>-->
-                <!--</div>-->
-        <!--</div>-->
 
     </div>
     <div class="modal-footer">

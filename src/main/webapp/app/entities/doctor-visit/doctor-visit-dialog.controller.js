@@ -16,7 +16,7 @@
         vm.openCalendar = openCalendar;
         vm.save = save;
         vm.doctors = Doctor.query();
-        vm.consultrooms = ConsultRoom.query();
+        vm.consultRooms = ConsultRoom.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

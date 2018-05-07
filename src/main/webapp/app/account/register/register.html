@@ -29,7 +29,7 @@
                 <div class="form-group">
                     <label class="control-label" for="login" data-translate="global.form.username">Username</label>
                     <input type="text" class="form-control" id="login" name="login" placeholder="{{'global.form.username.placeholder' | translate}}"
-                           ng-model="vm.registerAccount.login" ng-minlength=1 ng-maxlength=50 ng-pattern="/^[_'.@A-Za-z0-9-]*$/" required>
+                           ng-model="vm.registerAccount.login" ng-minlength=6 ng-maxlength=50 ng-pattern="/^[_'.@A-Za-z0-9-]*$/" required>
                     <div ng-show="form.login.$dirty && form.login.$invalid">
                         <p class="help-block"
                                ng-show="form.login.$error.required" data-translate="register.messages.validate.login.required">
@@ -37,7 +37,7 @@
                         </p>
                         <p class="help-block"
                                ng-show="form.login.$error.minlength" data-translate="register.messages.validate.login.minlength">
-                            Your username is required to be at least 1 character.
+                            Your username is required to be at least 6 character.
                         </p>
                         <p class="help-block"
                                ng-show="form.login.$error.maxlength" data-translate="register.messages.validate.login.maxlength">
@@ -58,6 +58,39 @@
                            <!--ng-show="" data-translate="global.messages.validate.last-name.required">-->
                             <!--Your last-name is required.-->
                         <!--</p>-->
+                    <!--</div>-->
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="first-name" data-translate="global.form.first-name">first-name</label>
+                    <input type="text" class="form-control" id="first-name" name="first-name" placeholder="{{'global.form.first-name.placeholder' | translate}}"
+                           ng-model="vm.registerAccount.firstName" ng-minlength=1 ng-maxlength=200 required>
+                    <!--<div ng-show="">-->
+                    <!--<p class="help-block"-->
+                    <!--ng-show="" data-translate="global.messages.validate.last-name.required">-->
+                    <!--Your last-name is required.-->
+                    <!--</p>-->
+                    <!--</div>-->
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="mobile-phone" data-translate="global.form.mobile-phone">mobile-phone</label>
+                    <input type="text" class="form-control" id="mobile-phone" name="mobile-phone" placeholder="{{'global.form.mobile-phone.placeholder' | translate}}"
+                           ng-model="vm.registerAccount.mobilePhone" ng-minlength=1 ng-maxlength=200 required>
+                    <!--<div ng-show="">-->
+                    <!--<p class="help-block"-->
+                    <!--ng-show="" data-translate="global.messages.validate.last-name.required">-->
+                    <!--Your last-name is required.-->
+                    <!--</p>-->
+                    <!--</div>-->
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="id-card" data-translate="global.form.id-card">id-card</label>
+                    <input type="text" class="form-control" id="id-card" name="id-card" placeholder="{{'global.form.id-card.placeholder' | translate}}"
+                           ng-model="vm.registerAccount.idCard" ng-minlength=15 ng-maxlength=18 required>
+                    <!--<div ng-show="">-->
+                    <!--<p class="help-block"-->
+                    <!--ng-show="" data-translate="global.messages.validate.last-name.required">-->
+                    <!--Your last-name is required.-->
+                    <!--</p>-->
                     <!--</div>-->
                 </div>
                 <div class="form-group">

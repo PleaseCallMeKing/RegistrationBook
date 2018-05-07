@@ -125,4 +125,11 @@ public class DoctorVisitResource {
         doctorVisitService.delete(id);
         return ResponseEntity.ok().headers(HeaderUtil.createEntityDeletionAlert(ENTITY_NAME, id.toString())).build();
     }
+
+    @GetMapping("/doctor/{doctorId}/doctor-visits")
+    @Timed
+    public List<DoctorVisitDTO> getAllDoctorVisitsByDoctorId(@PathVariable Long doctorId) {
+        log.debug("REST request to get all DoctorVisits by doctorId: {}", doctorId);
+        return doctorVisitService.findAllByDoctorId(doctorId);
+    }
 }

@@ -15,6 +15,7 @@ public interface DoctorVisitMapper extends EntityMapper<DoctorVisitDTO, DoctorVi
     @Mapping(source = "doctor.fullName", target = "doctorName")
     @Mapping(source = "room.id", target = "roomId")
     @Mapping(source = "room.consultRoomName", target = "roomName")
+    @Mapping(source = "room.consultRoomNo", target = "roomNo")
     DoctorVisitDTO toDto(DoctorVisit doctorVisit);
 
     @Mapping(source = "doctorId", target = "doctor")
