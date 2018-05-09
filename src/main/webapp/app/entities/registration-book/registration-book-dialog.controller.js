@@ -6,20 +6,21 @@
         .controller('RegistrationBookDialogController', RegistrationBookDialogController);
 
     RegistrationBookDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity',
-         'RegistrationBook','AlertService','Principal',
+         'DoctorDoctorVisit', 'RegistrationBook','AlertService','Principal',
         'ThirdLevelDepartment', '$resource'];
 
     function RegistrationBookDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity,
-                                               RegistrationBook,AlertService,Principal,
+                                               DoctorDoctorVisit, RegistrationBook,AlertService,Principal,
                                                ThirdLevelDepartment, $resource) {
         var vm = this;
-
+        // vm.thirdLevelDepartment.doctor = "";
         vm.registrationBook = entity;
         vm.clear = clear;
         vm.datePickerOpenStatus = {};
         vm.openCalendar = openCalendar;
         vm.save = save;
         vm.thirdLevelDepartments = ThirdLevelDepartment.query();
+
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
@@ -35,14 +36,10 @@
             vm.registrationBook.deptName = vm.thirdLevelDepartment.deptName;
             vm.registrationBook.doctorId = vm.thirdLevelDepartment.doctor.id;
             vm.registrationBook.doctorName = vm.thirdLevelDepartment.doctor.fullName;
-            //
-            // vm.registrationBook.consultId = vm.doctorVisit.roomId;
-            // vm.registrationBook.consultName = vm.doctorVisit.roomName;
-            // vm.registrationBook.consultNo = vm.doctorVisit.roomNo;
-            Principal.identity().then(function(account) {
-                vm.account = account;
-                loadDoctorVisitData();
-            });
+            vm.registrationBook.consultId = vm.doctorVisit.roomId;
+            vm.registrationBook.consultName = vm.doctorVisit.roomName;
+            vm.registrationBook.consultNo = vm.doctorVisit.roomNo;
+            vm.registrationBook.visitDateTime = vm.doctorVisit.visitData;
 
             if (vm.registrationBook.id !== null) {
                 RegistrationBook.update(vm.registrationBook, onSaveSuccess, onSaveError);
@@ -69,20 +66,8 @@
             vm.datePickerOpenStatus[date] = true;
         }
 
-
-
-        function loadDoctorVisitData() {
-
-            var DoctorVisitData = $resource("api/doctor/" + vm.thirdLevelDepartment.doctor.id + "/doctor-visits", {});
-
-            DoctorVisitData.query({}, onSuccess, onError);
-            function onSuccess(data) {
-                vm.doctorVisits = data;
-            }
-            function onError(error) {
-                AlertService.error(error.data.message);
-            }
-
+        vm.getDoctorVisit = function () {
+            vm.doctorVisits = DoctorDoctorVisit.query({doctorId: vm.thirdLevelDepartment.doctor.id});
         }
     }
 })();

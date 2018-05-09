@@ -20,14 +20,13 @@
         </div>
         <div class="form-group">
             <label class="control-label" data-translate="registrationBookApp.registrationBook.doctorName" for="field_doctorName">Doctor Name</label>
-            <select class="form-control" name="doctorName" id="field_doctorName" ng-model="vm.thirdLevelDepartment.doctor" ng-options="doctor as doctor.fullName for doctor in vm.thirdLevelDepartment.doctors track by doctor.id">
+            <select class="form-control" name="doctorName" id="field_doctorName" ng-change="vm.getDoctorVisit()" ng-model="vm.thirdLevelDepartment.doctor" ng-options="doctor as doctor.fullName for doctor in vm.thirdLevelDepartment.doctors track by doctor.id">
             </select>
         </div>
         <div class="form-group">
             <label class="control-label" data-translate="registrationBookApp.registrationBook.visitDateTime" for="field_visitDateTime">Visit Date Time</label>
             <select class="form-control" name="visitDateTime" id="field_visitDateTime" ng-model="vm.doctorVisit" ng-options="doctorVisit as doctorVisit.visitData for doctorVisit in vm.doctorVisits track by doctorVisit.id">
             </select>
-            {{vm.doctorVisits}}
         </div>
 
     </div>
